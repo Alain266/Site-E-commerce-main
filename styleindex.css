@@ -1,0 +1,351 @@
+*{
+    font-family: 'Montserrat', sans-serif; /* Police de caractères */
+}
+
+/* effet d'ombre en haut de la page */
+body::before {
+    content: ""; /* contenu */
+    position: fixed; /* position fixe */
+    top: -10px; /* tire vers le haut */
+    left: 0; /* tire vers la gauche */
+    width: 100%; /* largeur */
+    height: 10px; /* hauteur */
+    box-shadow: 0px 0 15px rgba(0, 0, 0, 1); /* Effet d'ombre */
+    z-index: 100; /* Assure que l'overlay est au-dessus du contenu */
+}
+
+body{
+    margin: 0 0 0 0; /* marge intérieure */
+    background-image: url("Images/Background/pexels-tomas-anunziata-3876407.jpg"); /* Chemin vers votre image de fond */
+    background-size:cover; /* Taille de l'image */
+    height: max-content; /* Hauteur de l'image */
+}
+
+/* Overlay de chargement */
+.loading-overlay {
+    position: fixed; /* position fixe */
+    top: 0; /* tire vers le haut */
+    left: 0; /* tire vers la gauche */
+    width: 100%; /* largeur */
+    height: 100%; /* hauteur */
+    background-color: rgba(39, 105, 85, 0.5); /* Couleur de fond semi-transparente */
+    backdrop-filter: blur(5px); /* Effet de flou */
+    display: flex; /* Affiche les éléments en ligne */
+    justify-content: center; /* Centre les éléments en ligne */
+    align-items: center; /* Centre les éléments en colonne */
+    z-index: 9999; /* Assure que l'overlay est au-dessus du contenu */
+    transition: opacity 3s ease; /* Animation du chargement */
+}
+
+/* Logo du site */
+.loading-image {
+    margin: auto; /* centre le texte */
+    width: 250px; /* largeur */
+    height: 250px; /* hauteur */
+    background-image: url("Images/Logo/ecologie.png"); /* Chemin vers votre image de chargement */
+    background-size: cover; /* Taille de l'image */
+    animation: spin 2s linear infinite; /* Animation du chargement */
+}
+
+@keyframes spin { /* Animation du chargement */
+    0% { 
+        transform: rotate(0deg); /* Rotation de 0 degrés */
+    }
+    100% {
+        transform: rotate(360deg); /* Rotation de 360 degrés */
+    }
+}  
+
+
+main{
+    
+    display: flex; /* Affiche les éléments en ligne */
+    justify-content: center; /* Centre les éléments en ligne */
+    margin: 0 0 0 0; /* marge intérieure */
+}
+
+header{
+    margin-top: 0; /* marge intérieure */
+    padding: 10px 0px 0px 0px; /* marge intérieure */
+}
+
+header h1{
+    margin: auto; /* centre le texte */
+    margin-bottom: 10px; /* marge intérieure */
+    height: 2em; /* hauteur */
+    width: 300px; /* largeur */
+    padding: 0px 0px 15px 0px; /* marge intérieure */
+    color: rgba(255, 255, 255, 1); /* Couleur du texte */
+    text-align: center; /* Texte centré */
+    background-color:rgba(39, 105, 85, 1); /* Couleur de fond */
+    border-radius: 50px; /* Arrondi du borde */
+}
+
+h2{
+    font-size: 15px; /* Taille du texte */
+    text-align: center; /* Texte centré */
+}
+
+#slogan{
+    position: absolute; /* position absolue */
+    margin-left: 50%; /* marge intérieure */
+    left: -120px; /* tire vers la gauche */
+    font-size: 20px; /* Taille du texte */
+    font-family: 'Parisienne', cursive; /* Police de caractères */
+    font-weight: 400; /* Police de caractères */
+}
+
+header nav{
+    border-bottom: rgba(39, 105, 85, 1) 1px solid; /* Bordure du menu */
+    border-top: rgba(39, 105, 85, 1) 1px solid; /* Bordure du menu */
+    display: flex; /* Affiche les éléments en ligne */
+    justify-content: center; /* Centre les éléments en ligne */
+    justify-content: space-around; /* Centre les éléments en colonne */
+    height: 3em; /* Hauteur */
+    width: 100%; /* Largeur */
+    background-color: rgba(0, 0, 0, 0.75); /* Couleur de fond */
+    backdrop-filter: blur(10px); /* Effet de flou */
+}
+
+header nav a{
+    margin: auto; /* centre le texte */
+    color: rgb(255, 255, 255); /* Couleur du texte */
+    text-decoration: none; /* Supprime le soulignement */
+}
+
+/* style si l'écran est plus petit que 1080px */
+@media screen and (max-width: 1080px) { 
+    nav a{
+        display: none /* N'affiche rien */
+    }  
+}
+
+.menu{
+    position: absolute; /* position absolue */
+    top: 99px; /* tire vers le haut */
+    right: 45%; /* tire vers la droite */
+    width: 50px; /* largeur */
+}
+
+/* style si l'écran est plus grand que 1080px */
+@media screen and (min-width: 1080px) { 
+    .menu{
+        display: none /* N'affiche rien */
+    }    
+}
+
+/* Disposition du menu hamburger */
+#pagehamburger{
+    display: flex; /* Affiche les éléments en ligne */
+    justify-content: center; /* Centre les éléments en ligne */
+    position:fixed; /* position fixe */
+    margin: 0; /* retire les marges */
+    left: -100%; /* tire vers la gauche */
+    width: 100%; /* largeur */
+    height: 100%; /* hauteur */
+    background-color: rgba(39, 105, 85, 0.5); /* couleur de fond */
+    backdrop-filter: blur(10px); /* Effet de flou */
+    z-index: 2; /* Assure que l'overlay est au-dessus du contenu */
+    border-radius: 5px; /* angle de la bordure */
+    transition: left 0.8s ease-in-out; /* Transition pour le déplacement horizontal */
+}
+
+/* style si l'écran est plus grand que 1080px */
+@media screen and (min-width: 1080px) { 
+    #pagehamburger{
+        display: none /* N'affiche rien */
+    }    
+}
+
+#menunav{
+    position: sticky; /* position fixe */
+    display: flex; /* affiche les éléments en ligne */
+    justify-content: center; /* centre les éléments en ligne */
+    flex-direction: column; /* disposition des éléments */
+    gap: 50px; /* marge intérieure */
+    font-size: 2em; /* taille de la police */
+    padding: 2em; /* marge intérieure */
+}
+
+#menunav li{
+    list-style: none; /* retire les puces */
+}
+
+#menunav a{
+    text-decoration: none; /* retire le soulignement des liens */
+    color: #000000; /* couleur du texte */
+}
+
+#menunav a:hover{
+    color: rgba(255, 255, 255, 1); /* couleur du texte */
+}
+
+/* Disposition du contenu de la page par grille */
+.container{  display: grid;
+    grid-template-columns: 1fr 1fr; /* Nombre de colonnes */
+    grid-template-rows: max-content max-content 1fr max-content;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "p1 p2"
+      "p3 p3"
+      "p4 p4"
+      "p5 p5";
+}
+
+.p1{
+    grid-area: p1; 
+}
+
+#video{
+    width: 100%; /* largeur */
+    height: 100%; /* hauteur */
+}
+
+.p2{ 
+    height: max-content; /* hauteur */
+    grid-area: p2; 
+}
+
+#intro{
+    margin: auto; /* centre le texte */
+    color: #FFF; /* couleur du texte */
+    text-align: center; /* centre le texte */
+    background-color: rgba(39, 105, 85, 0.5); /* couleur de fond */
+    border-radius: 25px; /* angle de la bordure */ 
+    margin: 10px; /* marge intérieure */   
+}
+
+.p3{
+    grid-area: p3;
+    background-color: rgba(39, 105, 85, 0.5); /* couleur de fond */
+    color: #FFFFFF; /* couleur du texte */ 
+    backdrop-filter: blur(5px); /* Effet de flou */
+}
+
+#titre1{
+    text-align: center; /* centre le texte */
+    background-color: rgba(0, 0, 0, 1); /* couleur de fond */
+    border-radius: 25px; /* angle de la bordure */
+    margin: 25px auto; /* marge intérieure */
+    width: 20em; /* largeur */
+    font-size: 20px; /* taille de la police */
+}
+
+#produits{
+    display: flex; /* Affiche les éléments en ligne */
+    justify-content: center; /* Centre les éléments en ligne */
+    flex-wrap: wrap; /* Affiche les éléments en ligne */
+    justify-content: space-around; /* Centre les éléments en ligne */
+    padding-bottom: 50px; /* marge intérieure */
+}
+
+.fiche-produit{
+    font-weight: bold; /* Police de caractères */
+    padding: 10px; /* marge intérieure */
+    margin: 10px; /* marge intérieure */
+    color: #000; /* couleur du texte */
+    text-align: center; /* Texte centré */
+    background: rgba(255, 255, 255, 1); /* Couleur de fond */
+    border-radius: 25px; /* angle de la bordure */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0  rgba(0, 0, 0, 0.19); /* Effet de flou */
+    transition: transform 0.3s ease-in-out; /* Transition avec effet smooth */
+}
+
+.fiche-produit h1{
+    background-color: rgba(39, 105, 85, 0.5); /* couleur de fond */
+    border-radius: 25px; /* angle de la bordure */
+    font-size: 20px; /* taille de la police */
+}
+
+.fiche-produit:hover{
+    transform: scale(1.05); /* Zoom au survol */
+}
+
+.fiche-produit img{
+    width: 7em; /* largeur */
+    height: 7em; /* hauteur */
+}
+
+.p4{
+    margin-bottom: 25px;
+    height: max-content; /* hauteur */
+    grid-area: p4; 
+}
+
+.p4 h2{
+    color: rgba(255, 255, 255, 1); /* couleur du texte */
+    text-align: center; /* Texte centré */
+    background-color: rgba(0, 0, 0, 1); /* couleur de fond */
+    border-radius: 25px; /* angle de la bordure */
+    margin: 25px auto; /* marge intérieure */
+    width: 10em; /* largeur */
+    font-size: 20px; /* taille de la police */
+}
+
+#commentaires{
+    display: flex; /* Affiche les éléments en ligne */
+    justify-content: center; /* Centre les éléments en ligne */
+    flex-wrap: wrap; /* Affiche les éléments en ligne */
+    gap: 10px; /* marge intérieure */
+    justify-content: space-around; /* Centre les éléments en ligne */
+}
+
+.avis{ 
+    margin-bottom: 0px; /* marge intérieure */
+    padding: 25px;  /* marge intérieure */
+    color: rgba(255, 255, 255, 1); /* couleur du texte */
+    text-align: center; /* Texte centré */
+    background-color: rgba(39, 105, 85, 0.5); /* couleur de fond */
+    border-radius: 150px; /* angle de la bordure */
+    font-size: 20px; /* taille de la police */
+    backdrop-filter: blur(5px); /* Effet de flou */
+}
+
+.p5{
+    height: max-content; /* hauteur */
+    color: rgba(255, 255, 255, 1); /* couleur du texte */
+    margin-bottom: 75px; /* marge intérieure */
+    background-color: rgba(0, 0, 0, 0.65); /* couleur de fond */
+    grid-area: p5;
+}
+
+.p5 h2{
+    font-size: 20px; /* taille de la police */     
+}
+
+#partenaires span{
+    display: flex; /* Affiche les éléments en ligne */
+    justify-content: center; /* Centre les éléments en ligne */
+    flex-direction: column; /* disposition des éléments */
+    width: 10em; /* largeur */
+    height: 10em; /* hauteur */
+    font-size: 20px; /* taille de la police */
+}
+
+#partenaires{
+    display: flex; /* Affiche les éléments en ligne */
+    justify-content: center; /* Centre les éléments en ligne */
+    flex-wrap: wrap; /* Affiche les éléments en ligne */
+    gap: 10px; /* marge intérieure */
+    justify-content: space-around; /* Centre les éléments en ligne */
+    padding-bottom: 25px; /* marge intérieure */
+}
+
+#partenaires img{
+    width: 10em; /* largeur */
+    height: 10em; /* hauteur */
+    border-radius: 25px; /* angle de la bordure */
+}
+
+footer{
+    font-size: 15px; /* taille de la police */
+    text-align: center; /* Texte centré */
+    position: fixed; /* position fixe */
+    bottom: 0; /* marge intérieure */
+    width: 100%; /* largeur */
+    height: 3.5em; /* hauteur */
+    background-color: black; /* couleur de fond */
+    color: #FFFFFF; /* couleur du texte */
+    z-index: 3; /* ordre de l'élément */
+}
