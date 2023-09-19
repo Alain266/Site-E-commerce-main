@@ -211,22 +211,24 @@ header nav a{
 }
 
 #contactform{
-    margin: auto;
+    margin: auto; /* marge intérieure */
     padding: 25px; /* marge intérieure */
     color: #FFFFFF; /* couleur du texte */
-    border-radius: 50px;
+    border-radius: 50px; /* angle de la bordure */
 }
 
 #contactform p{
+    margin: 0 auto 25px auto;
     text-align: center;
 }
 
 #contactform fieldset{
+    margin: auto; /* marge intérieure */
     text-align: center; /* centre le texte */
+    width:70%; /* largeur */
     max-width: 1000px; /* largeur */
     background-color: rgba(255, 255, 255, 0.1); /* couleur de fond */
-    border-radius: 5px;
-    margin-inline: 150px;
+    border-radius: 5px; /* angle de la bordure */
 }
 
 #contactform input{
