@@ -182,13 +182,13 @@ header nav a{
 
 /* Disposition du contenu de la page par grille */
 .container{  display: grid;
-    grid-template-columns: 1fr 1fr; /* Nombre de colonnes */
+    grid-template-columns: 1fr; /* Nombre de colonnes */
     grid-template-rows: max-content max-content 1fr max-content;
     gap: 0px 0px;
     grid-auto-flow: row; /* disposition dynamique des éléments en ligne*/
     grid-template-areas:
-      "p3 p3"
-      "p5 p5";
+      "p3"
+      "p5 ";
 }
 
 .p3{
