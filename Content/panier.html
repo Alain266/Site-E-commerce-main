@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="../Styles/stylePanier.css"> <!-- Lien vers le fichier style -->
     <script src="../script.js" defer></script> <!-- Lien vers le fichier script -->
     <script src="../Scripts/scriptPanier.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <title>Panier</title> 
 </head>
 <body>
@@ -41,22 +43,22 @@
     </header>
     <main class="container"> <!-- Main contenu -->
         <article class="p3"> <!-- Panier -->
-            <h2 id="titre1">PANIER</h2>
-            <div id="panier">
-                <table id="cart">
-                    <tr>
+            <h2 id="titre1">PANIER</h2> <!-- Titre du panier -->
+            <div id="panier"> <!-- Panier -->
+                <table id="cart"> <!-- Tableau du panier -->
+                    <tr> <!-- Ligne du panier -->
                         <th>Produit</th>
                         <th>Prix</th>
                         <th>Quantité</th>
                         <th>Total</th>
                     </tr>
-                    <tr class="cart_product">
+                    <tr class="cart_product"> <!-- Ligne du panier -->
                         <td>Produit A</td>
                         <td class="unit_price" data-unit-price="10">
                             <span class="value">10</span> €
                         </td>
-                        <td class="quantity">
-                            <input type="number" class="influent-price-on-change" value="1">
+                        <td class="quantity input">
+                            <input type="number" class="influent-price-on-change" value="1" min="0">
                         </td>
                         <td class="total_price" data-total-price="10"></td>
                         <td>
@@ -66,14 +68,15 @@
                             </select>
                         </td>
                     </tr>
-                    <tr class="cart_product">
+                    <tr class="cart_product"> <!-- Ligne du panier -->
                         <td>Produit B</td>
                         <td class="unit_price" data-unit-price="20">
+                            <span class="value">20</span> €
                         </td>
-                        <td class="quantity">
-                            <input type="number" class="influent-price-on-change" value="1">
+                        <td class="quantity input">
+                            <input type="number" class="influent-price-on-change" value="1" min="0">
                         </td>
-                        <td class="total_price" data-total-price="10"></td>
+                        <td class="total_price" data-total-price="20"></td>
                         <td>
                             <select class="influent-price-on-change">
                                 <option>1</option>
@@ -81,30 +84,45 @@
                             </select>
                         </td>
                     </tr>
-                    <tr>
-                        <td colspan="3" style="text-align: right;">Total :</td>
-                        <td id="total"></td>
+                    <tr> <!-- Ligne du panier -->
+                        <td colspan="3" style="text-align: right;">Total (sans frais de livraison) :</td>
+                        <td class="total_cart"></td>
                     </tr>
                 </table>
-                <fieldset>
-                    <legend>Selectionnnez un mode de livraison :</legend>
+                <fieldset> <!-- Formulaire du panier -->
+                    <legend style="margin: auto;";">Selectionnnez un mode de livraison :</legend> <!-- Titre du fieldset -->
                     <div>
-                        <input type="radio" id="colis" name="livraison" value="5" checked />
-                        <label for="colis">Relais colis à 5€</label>
+                        <input type="radio" id="colis" class="delivery_option" name="livraison" value="5" checked />
+                        <label for="colis">Relais colis à 5€ <ion-icon name="storefront-outline"></ion-icon> </label>
                     </div>
                     <div>
-                        <input type="radio" id="domicile" name="livraison" value="domicile" />
-                        <label for="domicile">A domicile à 12€</label>
+                        <input type="radio" id="domicile" class="delivery_option" name="livraison" value="12" />
+                        <label for="domicile">A domicile à 12€ <ion-icon name="home-outline"></ion-icon></label>
                     </div>
                 </fieldset>
-                <button>Acheter</button>
+                <form class="center" style="margin: 25px;">
+                    <label for="nom">Nom :</label> <!-- Label du champ --> <br>
+                    <input type="text" name="nom" id="nom" placeholder="Nom"> <!-- Champ du formulaire -->
+                    <label for="rue">Rue :</label> <!-- Label du champ --> <br>
+                    <input type="text" name="rue" id="rue" placeholder="Rue" required> <!-- Champ du formulaire -->
+                    <label for="cp">Code postal :</label> <!-- Label du champ --> <br>
+                    <input type="text" name="cp" id="cp" placeholder="Code postal" required> <!-- Champ du formulaire -->
+                    <label for="ville">Ville :</label> <!-- Label du champ --> <br>
+                    <input type="text" name="ville" id="ville" placeholder="Ville" required> <!-- Champ du formulaire -->
+                    <label for="mail">E-mail :</label> <!-- Label du champ --> <br>
+                    <input type="email" name="mail" id="mail" placeholder="E-mail" required> <!-- Champ du formulaire -->
+                    <label for="tel">Téléphone :</label> <!-- Label du champ --> <br>
+                    <input type="tel" name="tel" id="tel" placeholder="Téléphone"> <!-- Champ du formulaire -->
+                </form>
+                <p id="commandeTotale"></p>
+                <button>Acheter</button> <!-- Bouton d'achat -->
             </div>
             
         </article>
         <article class="p5"> <!-- Article partenaires -->
-            <h2>PARTENAIRES</h2>
-            <section id="partenaires">
-                <span>En partenariat avec :</span>
+            <h2>PARTENAIRES</h2> 
+            <section id="partenaires"> 
+                <span>En partenariat avec :</span> 
                 <img src="../Images/Partenaires/ministereeco.jpg"/>
                 <img src="../Images/Partenaires/greenpeace.jpg"/>
                 <img src="../Images/Partenaires/ecologieuniverselle.jpg"/>
@@ -114,7 +132,7 @@
         </article>
     </main>
     <footer> <!-- Bas de page -->
-        <p>COPYRIGHT © 2023</p>
+        <p>COPYRIGHT © 2023</p> <!-- Copyright -->
     </footer>
 </body>
 </html>
