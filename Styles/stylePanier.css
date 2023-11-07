@@ -212,17 +212,29 @@ header nav a {
   border: solid 1px rgba(255, 255, 255, 0.5); /* Bordure du menu */
 }
 
-#panier img{
-  width: 100px;
-  height: 100px;
+#panier img{ 
+  width: 100px; /* largeur */
+  height: 100px; /* hauteur */
+}
+
+#panier fieldset {
+  display: flex; /* Affiche les éléments en ligne */
+  flex-direction: column; /* disposition des éléments */ 
+  justify-content: center; /* Centre les éléments en ligne */
+  text-align: center; /* centre le texte */
+  gap: 25px; /* gap entre les éléments */
+}
+
+#panier fieldset legend {
+  text-align: center; /* centre le texte */
 }
 
 /* Disposition du contenu de la page par grille */
 .container {
-  display: grid;
+  display: grid; /* Affiche les éléments en ligne */
   grid-template-columns: 1fr 1fr; /* Nombre de colonnes */
   grid-template-rows: max-content max-content 1fr max-content;
-  gap: 0px 0px;
+  gap: 0px 0px; /* marge intérieure */
   grid-auto-flow: row; /* disposition dynamique des éléments en ligne*/
   grid-template-areas:
     "p3 p3"
