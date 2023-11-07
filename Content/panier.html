@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet"> <!-- Police de caractères google -->
     <link rel="stylesheet" href="../Styles/stylePanier.css"> <!-- Lien vers le fichier style -->
     <script src="../script.js" defer></script> <!-- Lien vers le fichier script -->
+    <script src="../Scripts/scriptPanier.js" defer></script>
     <title>Panier</title> 
 </head>
 <body>
@@ -39,21 +40,36 @@
         <img id="menu1" class="menu" src="../Images/Logo/icons8-menu-64(1).png" alt="Menu"/> <!-- Navigation du site version mobile -->
     </header>
     <main class="container"> <!-- Main contenu -->
-        <article class="p3"> <!-- Article produits -->
+        <article class="p3"> <!-- Panier -->
             <h2 id="titre1">PANIER</h2>
-            <form id="contactform" action="formulaire.php" method="post"> <!-- Formulaire du site -->
-                <fieldset>
-                    <label for="nom">Nom d'utilisateur :</label> <!-- Label du champ --> <br>
-                    <input type="text" name="nom" id="nom" required> <!-- Champ du formulaire -->
-                </fieldset>
-                <fieldset>
-                    <label for="password">Mot de passe :</label> <!-- Label du champ --> <br>
-                    <input type="password" name="password" id="password" required> <!-- Champ du formulaire -->
-                </fieldset>
-            </form>
-            <button id ="buttonform" type="submit" form="contactform">Envoyer</button>
-            <a href="inscription.html">Inscription</a>
-            <a href="motdepasseoublie.html">Mot de passe oublié ? </a>
+            <div id="panier">
+                <table>
+                    <tr>
+                        <th>Produit</th>
+                        <th>Prix</th>
+                        <th>Quantité</th>
+                        <th>Total</th>
+                    </tr>
+                    <tr>
+                        <td>Produit 1<br><img src="../Images/Produits/t-shirt.png"> </td>
+                        <td class="price" data-price="10">10€</td>
+                        <td><input type="number" value="1" min="0" class="quantity"></td>
+                        <td>10€</td>
+                    </tr>
+                    <tr>
+                        <td>Produit 2<br><img src="../Images/Produits/t-shirt.png"></td>
+                        <td class="price" data-price="20">20€</td>
+                        <td><input type="number" value="1" min="0" class="quantity"></td>
+                        <td>20€</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="text-align: right;">Total :</td>
+                        <td id="total"></td>
+                    </tr>
+                </table>
+                <button>Acheter</button>
+            </div>
+            
         </article>
         <article class="p5"> <!-- Article partenaires -->
             <h2>PARTENAIRES</h2>

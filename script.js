@@ -16,3 +16,4 @@ document.addEventListener("click", function(event) {
         document.getElementById("pagehamburger").style.left = "-100%";
     }
 });
+
