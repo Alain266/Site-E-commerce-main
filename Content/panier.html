@@ -85,7 +85,7 @@
                         </td>
                     </tr>
                     <tr> <!-- Ligne du panier -->
-                        <td colspan="3" style="text-align: right;">Total (sans frais de livraison) :</td>
+                        <td colspan="3" style="text-align: right;">Total (avec frais de livraison) :</td>
                         <td class="total_cart"></td>
                     </tr>
                 </table>
@@ -100,18 +100,18 @@
                         <label for="domicile">A domicile à 12€ <ion-icon name="home-outline"></ion-icon></label>
                     </div>
                 </fieldset>
-                <form class="center" style="margin: 25px;">
-                    <label for="nom">Nom :</label> <!-- Label du champ --> <br>
+                <form class="center" style="margin: 25px">
+                    <label for="nom"> <ion-icon name="person-circle-outline"></ion-icon> Nom :</label> <!-- Label du champ --> <br>
                     <input type="text" name="nom" id="nom" placeholder="Nom"> <!-- Champ du formulaire -->
-                    <label for="rue">Rue :</label> <!-- Label du champ --> <br>
+                    <label for="rue"> <ion-icon name="navigate-circle-outline"></ion-icon> Rue :</label> <!-- Label du champ --> <br>
                     <input type="text" name="rue" id="rue" placeholder="Rue" required> <!-- Champ du formulaire -->
-                    <label for="cp">Code postal :</label> <!-- Label du champ --> <br>
+                    <label for="cp"> <ion-icon name="map-outline"></ion-icon> Code postal :</label> <!-- Label du champ --> <br>
                     <input type="text" name="cp" id="cp" placeholder="Code postal" required> <!-- Champ du formulaire -->
-                    <label for="ville">Ville :</label> <!-- Label du champ --> <br>
+                    <label for="ville"> <ion-icon name="business-outline"></ion-icon> Ville :</label> <!-- Label du champ --> <br>
                     <input type="text" name="ville" id="ville" placeholder="Ville" required> <!-- Champ du formulaire -->
-                    <label for="mail">E-mail :</label> <!-- Label du champ --> <br>
+                    <label for="mail"> <ion-icon name="mail-unread-outline"></ion-icon> E-mail :</label> <!-- Label du champ --> <br>
                     <input type="email" name="mail" id="mail" placeholder="E-mail" required> <!-- Champ du formulaire -->
-                    <label for="tel">Téléphone :</label> <!-- Label du champ --> <br>
+                    <label for="tel"> <ion-icon name="call-outline"></ion-icon> Téléphone :</label> <!-- Label du champ --> <br>
                     <input type="tel" name="tel" id="tel" placeholder="Téléphone"> <!-- Champ du formulaire -->
                 </form>
                 <p id="commandeTotale"></p>

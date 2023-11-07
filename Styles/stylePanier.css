@@ -204,10 +204,22 @@ header nav a {
   border: solid 3px rgba(255, 255, 255, 0.5); /* Bordure du menu */
 }
 
+.quantity input {
+  width: 50px;
+}
+
+form input {
+  margin: 5px auto 25px auto;
+  width: 250px;
+  border-radius: 10px;
+  text-align: center;
+}
+
 #panier button {
-  margin: 25px auto 25px auto; /* centre le button */
+  margin: -25px auto 25px auto; /* centre le button */
   width: 100px; /* largeur */
   font-weight: bold;
+  font-size: 15px;
 }
 
 #panier th {
@@ -226,8 +238,9 @@ header nav a {
 }
 
 #panier fieldset {
-  width: 500px;
+  max-width: 500px;
   margin: auto;
+  margin-top: 25px;
   display: flex; /* Affiche les éléments en ligne */
   flex-direction: column; /* disposition des éléments */ 
   justify-content: center; /* Centre les éléments en ligne */
