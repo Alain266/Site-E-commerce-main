@@ -62,5 +62,23 @@ init();
 
 addEventListener('click', init);
 
+/**
+* Message d'erreur si case vide
+*/
+
+addEventListener('submit', function(event) { // Ecoute les envois du formulaire
+    var nom = document.getElementById('nom').value;
+    var rue = document.getElementById('rue').value;
+    var cp = document.getElementById('cp').value;
+    var ville = document.getElementById('ville').value;
+    var mail = document.getElementById('mail').value;
+    var tel = document.getElementById('tel').value;
+
+    if (!nom || !rue || !cp || !ville || !mail) {
+        event.preventDefault(); // Empêche la soumission du formulaire
+        alert('Veuillez remplir tous les champs.'); // Affiche un message d'erreur
+    }
+});
+
 
 

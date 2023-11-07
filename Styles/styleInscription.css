@@ -204,10 +204,12 @@ header nav a{
 }
 
 #titre1{
-    color: rgba(0, 0, 0, 1);
     text-align: center; /* centre le texte */
-    margin: 25px auto 0 auto; /* marge intérieure */
-    font-size: 25px; /* taille de la police */
+    background-color: rgba(0, 0, 0, 1); /* couleur de fond */
+    border-radius: 25px; /* angle de la bordure */
+    margin: 25px auto; /* marge intérieure */
+    width: 15em; /* largeur */
+    font-size: 20px; /* taille de la police */
 }
 
 #contactform{

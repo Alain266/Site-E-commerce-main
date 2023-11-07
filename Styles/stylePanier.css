@@ -216,7 +216,7 @@ form input {
 }
 
 #panier button {
-  margin: -25px auto 25px auto; /* centre le button */
+  margin: 25px auto 25px auto; /* centre le button */
   width: 100px; /* largeur */
   font-weight: bold;
   font-size: 15px;
@@ -261,15 +261,33 @@ form input {
   gap: 0px 0px; /* marge intérieure */
   grid-auto-flow: row; /* disposition dynamique des éléments en ligne*/
   grid-template-areas:
+    "p1 p1"
     "p3 p3"
     "p5 p5";
+}
+
+.p1{
+margin: auto; /* marge intérieure */
+grid-area: p1;
+color: #FFFFFF; /* couleur du texte */ 
+}
+
+.search{ 
+  grid-area: p1;
+  margin: 15px auto; /* marge intérieure */
+  width: 15em; /* largeur */
+  height: 1.5em; /* hauteur */
+  background-color: rgba(39, 105, 85, 0.5); /* couleur de fond */
+  color: #FFFFFF; /* couleur du texte */ 
+  backdrop-filter: blur(5px); /* Effet de flou */
+  border-radius: 25px; /* angle de la bordure */
 }
 
 .p3 {
   display: flex; /* Affiche les éléments en ligne */
   justify-content: center; /* Centre les éléments en ligne */
   flex-direction: column; /* disposition des éléments */
-  margin: 25px; /* marge intérieure */
+  margin:auto auto auto; /* marge intérieure */
   grid-area: p3;
   background-color: rgba(39, 105, 85, 0.5); /* couleur de fond */
   color: #ffffff; /* couleur du texte */
@@ -278,10 +296,12 @@ form input {
 }
 
 #titre1 {
-  color: rgba(0, 0, 0, 1);
   text-align: center; /* centre le texte */
-  margin: 25px auto 0 auto; /* marge intérieure */
-  font-size: 25px; /* taille de la police */
+  background-color: rgba(0, 0, 0, 1); /* couleur de fond */
+  border-radius: 25px; /* angle de la bordure */
+  margin: 25px auto; /* marge intérieure */
+  width: 15em; /* largeur */
+  font-size: 20px; /* taille de la police */
 }
 
 #contactform {
