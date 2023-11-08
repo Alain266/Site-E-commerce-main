@@ -14,7 +14,7 @@
     <script src="../script.js" defer></script> <!-- Lien vers le fichier script -->
     <script src="../Scripts/scriptPanier.js" defer></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <title>Panier</title> 
 </head>
 <body>
@@ -49,58 +49,32 @@
             <h2 id="titre1">PANIER</h2> <!-- Titre du panier -->
             <div id="panier"> <!-- Panier -->
                 <table id="cart"> <!-- Tableau du panier -->
-                    <tr> <!-- Ligne du panier -->
+                    <thead> <!-- Ligne du panier -->
                         <th>Produit</th>
                         <th>Prix</th>
                         <th>Quantité</th>
                         <th>Total</th>
-                    </tr>
-                    <tr class="cart_product"> <!-- Ligne du panier -->
-                        <td>Produit A</td>
-                        <td class="unit_price" data-unit-price="10">
-                            <span class="value">10</span> €
-                        </td>
-                        <td class="quantity input">
-                            <input type="number" class="influent-price-on-change" value="1" min="0">
-                        </td>
-                        <td class="total_price" data-total-price="10"></td>
-                        <td>
-                            <select class="influent-price-on-change">
-                                <option>1</option>
-                                <option>2</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr class="cart_product"> <!-- Ligne du panier -->
-                        <td>Produit B</td>
-                        <td class="unit_price" data-unit-price="20">
-                            <span class="value">20</span> €
-                        </td>
-                        <td class="quantity input">
-                            <input type="number" class="influent-price-on-change" value="1" min="0">
-                        </td>
-                        <td class="total_price" data-total-price="20"></td>
-                        <td>
-                            <select class="influent-price-on-change">
-                                <option>1</option>
-                                <option>2</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr> <!-- Ligne du panier -->
-                        <td colspan="3" style="text-align: right;">Total (avec frais de livraison) :</td>
-                        <td class="total_cart"></td>
-                    </tr>
+                        <th>Supprimer</th>
+                    </thead>
+                    <tbody> <!-- Liste produits du panier -->
+                    </tbody>
+                    <tfoot>
+                    
+                        <tr>
+                            <td colspan="2">Total</td>
+                            <td colspan="2" class="total_cart"></td>
+                        </tr>
+                    </tfoot>
                 </table>
                 <fieldset> <!-- Formulaire du panier -->
                     <legend style="margin: auto;";">Selectionnnez un mode de livraison :</legend> <!-- Titre du fieldset -->
                     <div>
-                        <input type="radio" id="colis" class="delivery_option" name="livraison" value="5" checked />
-                        <label for="colis">Relais colis à 5€ <ion-icon name="storefront-outline"></ion-icon> </label>
+                        <label for="delivery-2">Domicile (12 €) <ion-icon name="storefront-outline"></ion-icon></label>
+                        <input class="delivery-option" name="delivery" id="delivery-2" value="1200" type="radio"></label>
                     </div>
                     <div>
-                        <input type="radio" id="domicile" class="delivery_option" name="livraison" value="12" />
-                        <label for="domicile">A domicile à 12€ <ion-icon name="home-outline"></ion-icon></label>
+                        <label for="delivery-1">Relais colis (5 €) <ion-icon name="home-outline"></ion-icon></label>
+                        <input class="delivery-option" name="delivery" id="delivery-1" value="500" type="radio" checked=""></label>
                     </div>
                 </fieldset>
                 <form class="center" style="margin: 25px">
@@ -116,11 +90,10 @@
                     <input type="email" name="mail" id="mail" placeholder="E-mail" required> <!-- Champ du formulaire -->
                     <label for="tel"> <ion-icon name="call-outline"></ion-icon> Téléphone :</label> <!-- Label du champ --> <br>
                     <input type="tel" name="tel" id="tel" placeholder="Téléphone"> <!-- Champ du formulaire -->
-                    <button type="submit">Acheter</button> <!-- Bouton d'achat -->
+                    <button type="submit" id="btnBuy">Acheter</button> <!-- Bouton d'achat -->
                 </form>
                 <p id="commandeTotale"></p>
             </div>
-            
         </article>
         <article class="p5"> <!-- Article partenaires -->
             <h2>PARTENAIRES</h2> 

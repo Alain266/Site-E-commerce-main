@@ -215,7 +215,14 @@ form input {
   text-align: center;
 }
 
-#panier button {
+.remove {
+  margin: 25px auto 25px auto; /* centre le button */
+  width: 25px; /* largeur */
+  font-weight: bold;
+  font-size: 15px;
+}
+
+#btnBuy {
   margin: 25px auto 25px auto; /* centre le button */
   width: 100px; /* largeur */
   font-weight: bold;
