@@ -335,8 +335,9 @@ header nav a{
 }
 
 #partenaires img{
-    width: 10em; /* largeur */
-    height: 10em; /* hauteur */
+    margin: auto; /* marge intérieure */
+    width: 5em; /* largeur */
+    height: 5em; /* hauteur */
     border-radius: 25px; /* angle de la bordure */
 }
 
