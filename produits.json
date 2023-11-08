@@ -1,72 +1,92 @@
 [
     {
+        "id": 1,
         "nom": "T-shirt en Coton Bio",
         "description": "T-shirt en coton biologique avec un motif de feuille verte. Fabriqué de manière éco-responsable pour un impact minimal sur l'environnement. Idéal pour les amateurs de nature et de mode durable.",
         "prix": 1999,
         "categorie": "VETEMENTS ECO-RESPONSABLES",
-        "note": 4
+        "note": 4,
+        "image": "https://images.pexels.com/photos/4066292/pexels-photo-4066292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     },
     {
+        "id": 2,
         "nom": "Chemise Lin Léger",
         "description": "Chemise en lin léger, parfaite pour les journées ensoleillées. Confectionnée à partir de fibres naturelles pour une sensation de fraîcheur et de confort.",
         "prix": 2999,
         "categorie": "PRODUITS DE SOIN NATURELS",
-        "note": 3
+        "note": 3,
+        "image": "https://images.pexels.com/photos/8346226/pexels-photo-8346226.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     },
     {
+        "id": 3,
         "nom": "Jeans Denim Recyclé",
         "description": "Jeans en denim recyclé, confectionné avec des matériaux durables. Un choix élégant et respectueux de l'environnement pour votre garde-robe. Le jean EarthWear allie style et engagement écologique.",
         "prix": 999,
         "categorie": "VETEMENTS ECO-RESPONSABLES",
-        "note": 5
+        "note": 5,
+        "image": "https://images.pexels.com/photos/4210866/pexels-photo-4210866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     },
     {
+        "id": 4,
         "nom": "Sac Fourre-Tout en Toile de Jute",
         "description": "Sac fourre-tout en toile de jute naturelle, idéal pour faire vos courses tout en réduisant votre empreinte écologique. Solide, spacieux et élégant.",
         "prix": 4999,
         "categorie": "ARTICLES POUR VOTRE ECO-MAISON",
-        "note": 2
+        "note": 2,
+        "image": "https://images.pexels.com/photos/18954627/pexels-photo-18954627/free-photo-of-photographie-de-mode-fourre-tout-tir-vertical-toile-blanche.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     },
     {
+        "id": 5,
         "nom": "Soin pour la Peau Naturel",
         "description": "Soin pour la peau à base d'huiles essentielles naturelles. Hydratez et nourrissez votre peau tout en respectant la planète. Un incontournable pour une routine de soin consciente.",
         "prix": 3999,
         "categorie": "PRODUITS DE SOIN NATURELS",
-        "note": 4
+        "note": 4,
+        "image": "https://images.pexels.com/photos/6442509/pexels-photo-6442509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     },
     {
+        "id": 6,
         "nom": "Robe en Lin Biologique",
         "description": "Robe élégante en lin biologique. Parfait pour une tenue décontractée tout en contribuant à la préservation de l'environnement. Le style EcoChic incarne l'élégance responsable.",
         "prix": 5999,
         "categorie": "VETEMENTS ECO-RESPONSABLES",
-        "note": 5
+        "note": 5,
+        "image": "https://images.pexels.com/photos/5693889/pexels-photo-5693889.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     },
     {
+        "id": 7,
         "nom": "Panier de Rangement en Jonc de Mer",
         "description": "Panier de rangement en jonc de mer tissé à la main. Ajoutez une touche naturelle à votre intérieur tout en favorisant l'artisanat durable.",
         "prix": 7999,
         "categorie": "ARTICLES POUR VOTRE ECO-MAISON",
-        "note": 3
+        "note": 3,
+        "image": "https://images.pexels.com/photos/7262889/pexels-photo-7262889.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     },
     {
+        "id": 8,
         "nom": "Shampooing Solide Naturel",
         "description": "Shampooing solide à base d'ingrédients naturels. Nettoie et revitalise vos cheveux tout en minimisant les déchets plastiques. Adoptez une routine capillaire respectueuse de l'environnement.",
         "prix": 8999,
         "categorie": "PRODUITS DE SOIN NATURELS",
-        "note": 4
+        "note": 4,
+        "image": "https://images.pexels.com/photos/7262414/pexels-photo-7262414.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     },
     {
+        "id": 9,
         "nom": "Tissu en Coton Bio",
         "description": "Tissu en coton biologique de haute qualité. Idéal pour les projets de couture respectueux de l'environnement. La qualité PureThread vous offre la possibilité de créer tout en préservant la planète.",
         "prix": 9599,
         "categorie": "VETEMENTS ECO-RESPONSABLES",
-        "note": 4
+        "note": 4,
+        "image": "https://images.pexels.com/photos/7282431/pexels-photo-7282431.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     },
     {
+        "id": 10,
         "nom": "Bougie Parfumée en Cire de Soja",
         "description": "Bougie parfumée à base de cire de soja naturelle. Créez une ambiance chaleureuse dans votre maison tout en faisant un choix respectueux de l'environnement. Un must-have pour les amateurs de détente consciente.",
         "prix": 1999,
         "categorie": "ARTICLES POUR VOTRE ECO-MAISON",
-        "note": 3
+        "note": 3,
+        "image": "https://images.pexels.com/photos/14927987/pexels-photo-14927987.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     }
 ]

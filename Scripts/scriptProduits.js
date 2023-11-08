@@ -70,7 +70,7 @@ async function fill_products () {
     const cart_products = document.querySelector('#produits');
     const products =await getProducts();
 
-    for (let i=0; i< 4 && i <products.length; i++) {
+    for (let i=0; i<products.length; i++) {
         const product = products[i];
         const product_line = `<div class="fiche-produit">
                 <img src="${product.image}">

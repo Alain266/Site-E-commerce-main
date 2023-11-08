@@ -157,7 +157,7 @@ async function fill_products () {
             products.forEach((product) => {
                 const product_line = `
                     <tr class="cart_product">
-                        <td>${product.nom}</td>
+                        <td>${product.nom} <br> <img src="${product.image}" class="cart_product__image"></td>
                         <td class="unit_price" data-unit-price="${product.prix}">
                             <span class="value">${formatPriceToEuro(product.prix)}</span>
                         </td>
@@ -166,7 +166,7 @@ async function fill_products () {
                         </td>
                         <td class="total_price" data-total-price=""></td>
                         <td>
-                            <button class="remove">X</button>
+                            <ion-icon name="trash-outline" class="remove"></ion-icon>
                         </td>
                     </tr>`;
                 cart_products.innerHTML += product_line;

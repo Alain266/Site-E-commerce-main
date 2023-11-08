@@ -196,7 +196,7 @@ header nav a {
   justify-content: center; /* Centre les éléments en ligne */
   flex-direction: column; /* disposition des éléments */
   margin: 25px; /* marge intérieure */
-  grid-area: p4;
+  grid-area: p4; /* marge intérieure */
   background-color: rgba(39, 105, 85, 0.5); /* couleur de fond */
   color: #ffffff; /* couleur du texte */
   backdrop-filter: blur(5px); /* Effet de flou */
@@ -205,28 +205,46 @@ header nav a {
 }
 
 .quantity input {
-  width: 50px;
+  width: 35px; /* largeur */
+  border-radius: 5px; /* angle de la bordure */
 }
 
 form input {
-  margin: 5px auto 25px auto;
-  width: 250px;
-  border-radius: 10px;
-  text-align: center;
+  margin: 5px auto 25px auto; /* centre le button */
+  width: 150px; /* largeur */
+  border-radius: 10px; /* angle de la bordure */
+  text-align: center; /* centre le texte */
 }
 
 .remove {
   margin: 25px auto 25px auto; /* centre le button */
   width: 25px; /* largeur */
-  font-weight: bold;
-  font-size: 15px;
+  font-weight: bold; /* police de caractères */
+  font-size: 15px; /* Taille du texte */
+  border-radius: 5px; /* angle de la bordure */
+  background-color: rgba(255, 255, 255, 0.5); /* couleur de fond */
+  color: rgba(0, 0, 0, 1); /* couleur du texte */
+  border: solid 1px rgba(255, 255, 255, 0.5); /* Bordure du menu */
+}
+
+.remove:hover {
+  width: 50%; /* largeur */
+  background-color: rgba(255, 255, 255, 0.5); /* couleur de fond */
+  color: rgba(0, 0, 0, 1); /* couleur du texte */
+  border: solid 1px rgba(255, 255, 255, 0.5); /* Bordure du menu */
+  border-radius: 50px; /* angle de la bordure */
+  transform: scale(0.95); /* Zoom au survol */
 }
 
 #btnBuy {
   margin: 25px auto 25px auto; /* centre le button */
   width: 100px; /* largeur */
-  font-weight: bold;
-  font-size: 15px;
+  font-weight: bold; /* police de caractères */
+  font-size: 15px; /* Taille du texte */
+}
+
+#btnBuy:hover {
+  transform: scale(1.10); /* Zoom au survol */
 }
 
 #panier th {
@@ -244,10 +262,17 @@ form input {
   height: 100px; /* hauteur */
 }
 
-#panier fieldset {
-  max-width: 500px;
+.cart_product__image{
   margin: auto;
-  margin-top: 25px;
+  width: 100px; /* largeur */
+  height: 100px; /* hauteur */
+  border-radius: 50px; /* angle de la bordure */
+}
+
+#panier fieldset {
+  max-width: 400px; /* largeur */
+  margin: auto; /* marge intérieure */  
+  margin-top: 25px; /* marge intérieure */
   display: flex; /* Affiche les éléments en ligne */
   flex-direction: column; /* disposition des éléments */ 
   justify-content: center; /* Centre les éléments en ligne */
@@ -275,12 +300,12 @@ form input {
 
 .p1{
 margin: auto; /* marge intérieure */
-grid-area: p1;
+grid-area: p1; /* marge intérieure */
 color: #FFFFFF; /* couleur du texte */ 
 }
 
 .search{ 
-  grid-area: p1;
+  grid-area: p1; 
   margin: 15px auto; /* marge intérieure */
   width: 15em; /* largeur */
   height: 1.5em; /* hauteur */
@@ -294,8 +319,9 @@ color: #FFFFFF; /* couleur du texte */
   display: flex; /* Affiche les éléments en ligne */
   justify-content: center; /* Centre les éléments en ligne */
   flex-direction: column; /* disposition des éléments */
-  margin:auto auto 25px auto; /* marge intérieure */
-  grid-area: p3; 
+  margin:0; /* marge intérieure */
+  margin-bottom: 25px; /* marge intérieure */
+  grid-area: p3; /* marge intérieure */
   background-color: rgba(39, 105, 85, 0.5); /* couleur de fond */
   color: #ffffff; /* couleur du texte */
   backdrop-filter: blur(5px); /* Effet de flou */
@@ -312,17 +338,17 @@ color: #FFFFFF; /* couleur du texte */
 }
 
 #contactform {
-  margin: auto;
+  margin: auto; /* marge intérieure */
   padding: 25px; /* marge intérieure */
   color: #ffffff; /* couleur du texte */
-  border-radius: 50px;
+  border-radius: 50px; /* angle de la bordure */
 }
 
 .p3 a {
-  color: rgba(0, 0, 0, 1);
-  text-decoration: none; 
-  text-align: center;
-  margin-bottom: 25px;
+  color: rgba(0, 0, 0, 1); /* couleur du texte */
+  text-decoration: none; /* retire le soulignement des liens */
+  text-align: center; /* centre le texte */
+  margin-bottom: 25px; /* marge intérieure */
 }
 
 .p3 a:hover {
@@ -334,7 +360,7 @@ color: #FFFFFF; /* couleur du texte */
   color: rgba(255, 255, 255, 1); /* couleur du texte */
   margin-bottom: 75px; /* marge intérieure */
   background-color: rgba(0, 0, 0, 0.65); /* couleur de fond */
-  grid-area: p5;
+  grid-area: p5; 
 }
 
 .p5 h2 {

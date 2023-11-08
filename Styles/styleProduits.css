@@ -236,6 +236,7 @@ header nav a{
 }
 
 .fiche-produit{
+    max-width: 300px;
     font-weight: bold; /* Police de caractères */
     padding: 10px; /* marge intérieure */
     margin: 10px; /* marge intérieure */
@@ -260,6 +261,7 @@ header nav a{
 .fiche-produit img{
     width: 7em; /* largeur */
     height: 7em; /* hauteur */
+    border-radius: 150px; /* angle de la bordure */
 }
 
 
