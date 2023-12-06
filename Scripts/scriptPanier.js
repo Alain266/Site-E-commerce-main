@@ -150,7 +150,7 @@ async function getProducts() {
 /**
  * Création de la ligne du produit en html
  */
-async function fill_products () {
+async function fill_products() {
     const cart_products = document.querySelector('#cart tbody');
     await getProducts()
         .then((products) => {
