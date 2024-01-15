@@ -3,12 +3,13 @@
  */
 async function init()
 {   
+    
     overlay();
     openMenuHamburger();
     closeMenuHamburger();
     getProducts();
+    formatPriceToEuro(price);
     await fill_products();
-    new Shop();
 }
 
 init();
@@ -63,24 +64,46 @@ function openMenuHamburger(){
 };
 
 /**
- * Création des meilleures ventes du moment
+ * Récupère les data du fichier json et les affiche dans la page
  */
 async function fill_products () {
 
-    const cart_products = document.querySelector('#produits');
+    const cat1 = document.querySelector('#cat1');
+    const cat2 = document.querySelector('#cat2');
+    const cat3 = document.querySelector('#cat3');
     const products =await getProducts();
 
-    for (let i=0; i< 4 && i <products.length; i++) {
-        const product = products[i];
-        const product_line = `<div class="fiche-produit">
+    for (let i=0; i<products.length; i++) {
+        if (products[i].categorie == "VETEMENTS ECO-RESPONSABLES"){
+            const product = products[i];
+            const product_line = `<div class="produits">
                 <img src="${product.image}">
                 <h1>${product.nom}</h1>
                 <p>${product.description}</p>
                 <p>Prix : ${formatPriceToEuro(product.prix)}</p>
                 <button>Acheter</button>
-            </div>
-        </div>`
-        
-        cart_products.innerHTML += product_line;
+                </div>`;
+            cat1.innerHTML += product_line;
+        } else if(products[i].categorie == "PRODUITS DE SOIN NATURELS"){
+            const product = products[i];
+            const product_line = `<div class="produits">
+                <img src="${product.image}">
+                <h1>${product.nom}</h1>
+                <p>${product.description}</p>
+                <p>Prix : ${formatPriceToEuro(product.prix)}</p>
+                <button>Acheter</button>
+                </div>`;
+            cat1.innerHTML += product_line;
+        } else if(products[i].categorie == "PRODUITS DE SOIN NATURELS"){
+            const product = products[i];
+            const product_line = `<div class="produits">
+                <img src="${product.image}">
+                <h1>${product.nom}</h1>
+                <p>${product.description}</p>
+                <p>Prix : ${formatPriceToEuro(product.prix)}</p>
+                <button>Acheter</button>
+                </div>`;
+            cat1.innerHTML += product_line;
+        }
     }
 }
