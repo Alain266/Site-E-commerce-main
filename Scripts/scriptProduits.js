@@ -8,7 +8,7 @@ async function init()
     openMenuHamburger();
     closeMenuHamburger();
     getProducts();
-    formatPriceToEuro (price);
+    // formatPriceToEuro (price);
     await fill_products();
 }
 

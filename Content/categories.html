@@ -41,72 +41,19 @@
     </header>
     <main class="container"> <!-- Main contenu -->
         <div class="p1">
-            <input type="text" placeholder="Rechercher..." class="search"/>
+            <input type="text" placeholder="Rechercher..." class="search" id="searchbar" onkeyup="search()"/>
         </div>
-        <article class="p2"> <!-- Article produits -->
-            <h2 class="titre1" id="cat1">VETEMENTS ECO-RESPONSABLES</h2>
-            <!-- <div class="produits">
-                <div class="fiche-produit">
-                    <img src="../Images/Produits/t-shirt.png" alt="photo de t-shirt1 ">
-                    <h1>The Ordinary</h1>
-                    <p>T-shirt en coton biologique</p>
-                    <p>Prix : 29.99€</p>
-                    <button>Acheter</button>
-                </div>
-                <div class="fiche-produit">
-                    <img src="../Images/Produits/t-shirt.png" alt="photo de t-shirt1 ">
-                    <h1>The Ordinary</h1>
-                    <p>T-shirt en coton biologique</p>
-                    <p>Prix : 29.99€</p>
-                    <button>Acheter</button>
-                </div>
-            </div> -->
-        </article>
-        <article class="p3"> <!-- Article produits -->
-            <h2 class="titre1" id="cat2">PRODUITS DE SOIN NATURELS</h2>
-            <div class="produits">
-                <!-- <div class="fiche-produit">
-                    <img src="../Images/Produits/t-shirt.png" alt="photo de t-shirt 2">
-                    <h1>The Ordinary</h1>
-                    <p>T-shirt en coton biologique</p>
-                    <p>Prix : 29.99€</p>
-                    <button>Acheter</button>
-                </div>
-                <div class="fiche-produit">
-                    <img src="../Images/Produits/t-shirt.png" alt="photo de t-shirt1 ">
-                    <h1>The Ordinary</h1>
-                    <p>T-shirt en coton biologique</p>
-                    <p>Prix : 29.99€</p>
-                    <button>Acheter</button>
-                </div> -->
-            </div>
-        </article>
-        <article class="p4"> <!-- Article produits -->
-            <h2 class="titre1" id="cat3">ARTICLES POUR VOTRE ECO-MAISON</h2>
-            <div class="produits">
-                <!-- <div class="fiche-produit">
-                    <img src="../Images/Produits/t-shirt.png" alt="photo de t-shirt 3">
-                    <h1>The Ordinary</h1>
-                    <p>T-shirt en coton biologique</p>
-                    <p>Prix : 29.99€</p>
-                    <button>Acheter</button>
-                </div>
-                <div class="fiche-produit">
-                    <img src="../Images/Produits/t-shirt.png" alt="photo de t-shirt1 ">
-                    <h1>The Ordinary</h1>
-                    <p>T-shirt en coton biologique</p>
-                    <p>Prix : 29.99€</p>
-                    <button>Acheter</button>
-                </div>
-                <div class="fiche-produit">
-                    <img src="../Images/Produits/t-shirt.png" alt="photo de t-shirt1 ">
-                    <h1>The Ordinary</h1>
-                    <p>T-shirt en coton biologique</p>
-                    <p>Prix : 29.99€</p>
-                    <button>Acheter</button>
-                </div> -->
-            </div>
-        </article>
+        <ol id="liste">
+            <article class="p2"> <!-- Article produits -->
+                <h2 class="titre1" id="cat1">ECO-RESPONSABLES</h2>
+            </article>
+            <article class="p3"> <!-- Article produits -->
+                <h2 class="titre1" id="cat2">PRODUITS DE SOIN NATURELS</h2>
+            </article>
+            <article class="p4"> <!-- Article produits -->
+                <h2 class="titre1" id="cat3">ARTICLES POUR VOTRE ECO-MAISON</h2>
+            </article>
+        </ol>
         <article class="p5"> <!-- Article partenaires -->
             <h2>PARTENAIRES</h2>
             <section id="partenaires">

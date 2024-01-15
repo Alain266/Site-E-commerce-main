@@ -3,12 +3,11 @@
  */
 async function init()
 {   
-    
     overlay();
     openMenuHamburger();
     closeMenuHamburger();
     getProducts();
-    formatPriceToEuro(price);
+    // formatPriceToEuro(price);
     await fill_products();
 }
 
@@ -29,7 +28,6 @@ async function getProducts() {
  * @param {number}
  */
 function formatPriceToEuro (price) {
-    price = price / 100
     return price.toLocaleString('fr-FR', { style: 'currency', currency: 'EUR' });
 }
 
@@ -71,39 +69,24 @@ async function fill_products () {
     const cat1 = document.querySelector('#cat1');
     const cat2 = document.querySelector('#cat2');
     const cat3 = document.querySelector('#cat3');
-    const products =await getProducts();
+    const products = await getProducts();
 
     for (let i=0; i<products.length; i++) {
+        const product = products[i];
+        const product_line = `<div class="produits">
+        <img src="${product.image}">
+        <h1>${product.nom}</h1>
+        <p>${product.description}</p>
+        <p>Prix : ${formatPriceToEuro(product.prix)}</p> 
+        <br>
+        <button>Acheter</button>
+        </div>`;
         if (products[i].categorie == "VETEMENTS ECO-RESPONSABLES"){
-            const product = products[i];
-            const product_line = `<div class="produits">
-                <img src="${product.image}">
-                <h1>${product.nom}</h1>
-                <p>${product.description}</p>
-                <p>Prix : ${formatPriceToEuro(product.prix)}</p>
-                <button>Acheter</button>
-                </div>`;
             cat1.innerHTML += product_line;
         } else if(products[i].categorie == "PRODUITS DE SOIN NATURELS"){
-            const product = products[i];
-            const product_line = `<div class="produits">
-                <img src="${product.image}">
-                <h1>${product.nom}</h1>
-                <p>${product.description}</p>
-                <p>Prix : ${formatPriceToEuro(product.prix)}</p>
-                <button>Acheter</button>
-                </div>`;
-            cat1.innerHTML += product_line;
-        } else if(products[i].categorie == "PRODUITS DE SOIN NATURELS"){
-            const product = products[i];
-            const product_line = `<div class="produits">
-                <img src="${product.image}">
-                <h1>${product.nom}</h1>
-                <p>${product.description}</p>
-                <p>Prix : ${formatPriceToEuro(product.prix)}</p>
-                <button>Acheter</button>
-                </div>`;
-            cat1.innerHTML += product_line;
+            cat2.innerHTML += product_line;
+        } else if(products[i].categorie == "ARTICLES POUR VOTRE ECO-MAISON"){
+            cat3.innerHTML += product_line;
         }
     }
 }

@@ -9,6 +9,7 @@ async function init()
     getProducts();
     await fill_products();
     new Shop();
+    search();
 }
 
 init();
@@ -68,7 +69,7 @@ function openMenuHamburger(){
 async function fill_products () {
 
     const cart_products = document.querySelector('#produits');
-    const products =await getProducts();
+    const products = await getProducts();
 
     for (let i=0; i< 4 && i <products.length; i++) {
         const product = products[i];
@@ -79,8 +80,24 @@ async function fill_products () {
                 <p>Prix : ${formatPriceToEuro(product.prix)}</p>
                 <button>Acheter</button>
             </div>
-        </div>`
+        </div>`;
         
         cart_products.innerHTML += product_line;
     }
 }
+
+function search() {
+    let input = document.getElementById('searchbar').value
+    input=input.toLowerCase();
+    let x = document.getElementsByClassName('produits');
+
+    for (i = 0; i < x.length; i++) { 
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].style.display="none";
+        }
+        else {
+            x[i].style.display="list-item";              
+        }
+    }
+}
+

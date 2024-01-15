@@ -249,7 +249,7 @@ header nav a{
 
 .titre1{
     text-align: center; /* centre le texte */
-    background-color: rgba(0, 0, 0, 1); /* couleur de fond */
+    background-color: rgba(0, 0, 0, 0.381); /* couleur de fond */
     border-radius: 25px; /* angle de la bordure */
     margin: 25px auto; /* marge intérieure */
     width: 15em; /* largeur */
@@ -262,12 +262,9 @@ header nav a{
     flex-wrap: wrap; /* Affiche les éléments en ligne */
     justify-content: space-around; /* Centre les éléments en ligne */
     padding-bottom: 50px; /* marge intérieure */
-}
-
-.fiche-produit{
     font-weight: bold; /* Police de caractères */
-    padding: 10px; /* marge intérieure */
-    margin: 10px; /* marge intérieure */
+    padding: 20px; /* marge intérieure */
+    margin: 20px; /* marge intérieure */
     color: #000; /* couleur du texte */
     text-align: center; /* Texte centré */
     background: rgba(255, 255, 255, 1); /* Couleur de fond */
@@ -276,19 +273,23 @@ header nav a{
     transition: transform 0.3s ease-in-out; /* Transition avec effet smooth */
 }
 
-.fiche-produit h1{
+.produits h1{
     background-color: rgba(39, 105, 85, 0.5); /* couleur de fond */
     border-radius: 25px; /* angle de la bordure */
     font-size: 20px; /* taille de la police */
 }
 
-.fiche-produit:hover{
+.produits:hover{
     transform: scale(1.05); /* Zoom au survol */
 }
 
-.fiche-produit img{
+.produits img{
     width: 7em; /* largeur */
     height: 7em; /* hauteur */
+}
+
+ol{
+    list-style-type: none; /* Supprime les puces */
 }
 
 .p4{
