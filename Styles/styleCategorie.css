@@ -186,21 +186,22 @@ header nav a{
     gap: 0px 25px;
     grid-auto-flow: row;
     grid-template-areas:
-    "p1 p1"
-    "p2 p3"
-    "p4 p4"
-    "p5 p5";
+        "p1 p1"
+        "p2 p2"
+        "p3 p3"
+        "p4 p4"
+        "p5 p5";
 }
 
 /* style si l'écran est plus petit que 1080px */
 @media  screen and (max-width: 1080px) {
     .container {
         grid-template-areas:
-          "p1 p1"
-          "p2 p2"
-          "p3 p3"
-          "p4 p4"
-          "p5 p5";
+            "p1 p1"
+            "p2 p2"
+            "p3 p3"
+            "p4 p4"
+            "p5 p5";
     }  
     .p2{
         margin-right: 25px; /* marge intérieure */
@@ -228,9 +229,10 @@ header nav a{
 }
 
 .p2{
+    height: fit-content;
     grid-area: p2;
     margin-bottom: 25px; /* marge intérieure */
-    margin-left: 25px; /* marge intérieure */
+    margin-inline: auto; /* marge intérieure */
     background-color: rgba(39, 105, 85, 0.5); /* couleur de fond */
     color: #FFFFFF; /* couleur du texte */ 
     backdrop-filter: blur(5px); /* Effet de flou */
@@ -238,8 +240,9 @@ header nav a{
 }
 
 .p3{
+    height: fit-content;
     margin-bottom: 25px; /* marge intérieure */
-    margin-right: 25px; /* marge intérieure */
+    margin-inline: auto; /* marge intérieure */
     grid-area: p3;
     background-color: rgba(39, 105, 85, 0.5); /* couleur de fond */
     color: #FFFFFF; /* couleur du texte */ 
@@ -256,8 +259,10 @@ header nav a{
     font-size: 20px; /* taille de la police */
 }
 
-.produits{
+.produits_cart{
     display: flex; /* Affiche les éléments en ligne */
+    flex-direction: column ; /* disposition des éléments */
+    align-items: center; /* Centre les éléments en ligne */
     justify-content: center; /* Centre les éléments en ligne */
     flex-wrap: wrap; /* Affiche les éléments en ligne */
     justify-content: space-around; /* Centre les éléments en ligne */
@@ -273,29 +278,49 @@ header nav a{
     transition: transform 0.3s ease-in-out; /* Transition avec effet smooth */
 }
 
-.produits h1{
+/* style si l'écran est plus petit que 1080px */
+@media  screen and (max-width: 1080px) {
+    .produits_cart{
+        flex-direction: column ; /* disposition des éléments */
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+.produits_cart h1{
     background-color: rgba(39, 105, 85, 0.5); /* couleur de fond */
     border-radius: 25px; /* angle de la bordure */
     font-size: 20px; /* taille de la police */
 }
 
-.produits:hover{
+.produits_cart:hover{
     transform: scale(1.05); /* Zoom au survol */
 }
 
-.produits img{
+.produits_cart img{
     width: 7em; /* largeur */
     height: 7em; /* hauteur */
+    border-radius: 150px; /* angle de la bordure */
+}
+
+.produits_cart button{
+    height: 2.5em; /* hauteur */
+    border-radius: 25px; /* angle de la bordure */
 }
 
 ol{
     list-style-type: none; /* Supprime les puces */
+    display: flex; /* Affiche les éléments en ligne */
+    justify-content: center; /* Centre les éléments en ligne */
+    gap: 25px; /* marge intérieure */
 }
 
 .p4{
-    grid-area: p4;
+    height: fit-content;
+    grid-area: p4; /* disposition du contenu de la page par grille */
     margin-bottom: 25px; /* marge intérieure */
-    margin-inline: 25px; /* marge intérieure */
+    margin-inline: auto; /* marge intérieure */
     background-color: rgba(39, 105, 85, 0.5); /* couleur de fond */
     color: #FFFFFF; /* couleur du texte */ 
     backdrop-filter: blur(5px); /* Effet de flou */
@@ -307,7 +332,7 @@ ol{
     color: rgba(255, 255, 255, 1); /* couleur du texte */
     margin-bottom: 75px; /* marge intérieure */
     background-color: rgba(0, 0, 0, 0.65); /* couleur de fond */
-    grid-area: p5;
+    grid-area: p5; /* disposition du contenu de la page par grille */
 }
 
 .p5 h2{

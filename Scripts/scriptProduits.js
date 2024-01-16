@@ -10,6 +10,7 @@ async function init()
     getProducts();
     // formatPriceToEuro (price);
     await fill_products();
+    search()
 }
 
 init();
@@ -83,5 +84,23 @@ async function fill_products () {
         </div>`
         
         cart_products.innerHTML += product_line;
+    }
+}
+
+/**
+ * Barre de recherche 
+ */
+function search() { //fonction de recherche
+    let input = document.getElementById('searchbar').value // recupère la valeur de l'input
+    input=input.toLowerCase(); // met la valeur en minuscule
+    let produit = document.getElementsByClassName('fiche-produit'); // recupère la classe
+
+    for (i = 0; i < produit.length; i++) { // pour chaque élément dans la classe fiche-produit
+        if (!produit[i].innerHTML.toLowerCase().includes(input)) { // si l'élément ne contient pas la valeur de l'input
+            produit[i].style.display="none"; // cache l'élément
+        }
+        else {
+            produit[i].style.display="list-item"; // sinon affiche l'élément  
+        }
     }
 }

@@ -73,7 +73,7 @@ async function fill_products () {
 
     for (let i=0; i<products.length; i++) {
         const product = products[i];
-        const product_line = `<div class="produits">
+        const product_line = `<div class="produits_cart">
         <img src="${product.image}">
         <h1>${product.nom}</h1>
         <p>${product.description}</p>

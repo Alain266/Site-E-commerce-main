@@ -187,10 +187,10 @@ header nav a{
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      "p1 p2"
-      "p3 p3"
-      "p4 p4"
-      "p5 p5";
+        "p1 p2"
+        "p3 p3"
+        "p4 p4"
+        "p5 p5";
 }
 
 .p1{

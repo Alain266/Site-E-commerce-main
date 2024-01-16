@@ -86,17 +86,20 @@ async function fill_products () {
     }
 }
 
-function search() {
-    let input = document.getElementById('searchbar').value
-    input=input.toLowerCase();
-    let x = document.getElementsByClassName('produits');
+/**
+ * Barre de recherche 
+ */
+function search() { //fonction de recherche
+    let input = document.getElementById('searchbar').value // recupère la valeur de l'input
+    input=input.toLowerCase(); // met la valeur en minuscule
+    let produit = document.getElementsByClassName('produits_cart'); // recupère la classe
 
-    for (i = 0; i < x.length; i++) { 
-        if (!x[i].innerHTML.toLowerCase().includes(input)) {
-            x[i].style.display="none";
+    for (i = 0; i < produit.length; i++) { // pour chaque élément dans la classe produits_cart  
+        if (!produit[i].innerHTML.toLowerCase().includes(input)) { // si l'élément ne contient pas la valeur de l'input
+            produit[i].style.display="none"; // cache l'élément
         }
         else {
-            x[i].style.display="list-item";              
+            produit[i].style.display="list-item"; // sinon affiche l'élément  
         }
     }
 }
