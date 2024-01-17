@@ -311,6 +311,11 @@ header nav a{
     border-radius: 150px; /* angle de la bordure */
 }
 
+.produits_cart button{
+    height: 2.5em; /* hauteur */
+    border-radius: 25px; /* angle de la bordure */
+}
+
 ol{
     height: 100%;
     padding: 0;
