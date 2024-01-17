@@ -2,118 +2,46 @@
 /**
  * Initialise le code
  */
-async function init()
-{
-    await fill_products();
-    initCartProducts();
-    calculTotalCart();
-    manageDeliveryChange();
-    validateForm();
-    getProducts();
+function init() {
+    overlay();
+    openMenuHamburger();
+    closeMenuHamburger();
+    new Shop();
+    new Cart();
 }
 
 init();
 
 /**
- * Calcul le total d'une ligne dans le tableau
- * @param {Element} tr_cart_product
- * @returns {number}
+ * Overlay de chargement
  */
+function overlay() {
+    window.addEventListener("load", function() { // Lorsque la page et les ressources sont totalement chargées
+        var loadingOverlay = document.querySelector(".loading-overlay"); // Récupérer l'overlay de chargement
+        loadingOverlay.style.display = "none"; // Cacher l'overlay de chargement
+    })
+};
 
-function calculTotalProduct(tr_cart_product)  // Fonction calculer le total des lignes
-{
-    let quantity = tr_cart_product.querySelector('.quantity input').value; // Récupère la quantité
-    let unit_price = parseFloat(tr_cart_product.querySelector('.unit_price').dataset.unitPrice); // Récupère le prix
-    let total = quantity * unit_price; // Calcul du total
-
-    tr_cart_product.querySelector('.total_price').textContent = formatPriceToEuro(total); // Affiche le total
-    tr_cart_product.querySelector('.total_price').dataset.totalPrice = total; // Stocke le total
-
-    return total;
-}
+/** 
+ * Afficher le menu hamburger quand on clique sur le bouton
+ */
+function closeMenuHamburger() {
+    document.getElementById("menu1").addEventListener("click", function() { // Lorsque l'utilisateur clique sur l'élément menu1
+        document.getElementById("pagehamburger").style.left = "0"; // Afficher le menu
+    })
+};
 
 /**
- * Calcul le total du panier
- *
- * @returns {number}
+ * Fermer le menu hamburger quand on clique autre part que sur le bouton
  */
-function calculTotalCart()
-{
-    let total = 0;
-
-    // 1 - Calcul des lignes
-    let dom_total_prices = document.querySelectorAll('.cart_product .total_price')
-    dom_total_prices.forEach(function(dom_total_price) {
-        total += parseFloat(dom_total_price.dataset.totalPrice);
-    });
-
-    // 2 - Prise en compte du choix de livraison
-    if (document.querySelector('.delivery-option:checked') !== null) {
-        total += parseFloat(document.querySelector('.delivery-option:checked').value);
-    }
-    
-    document.querySelector('#cart .total_cart').textContent = formatPriceToEuro(total);
-
-    return total;
-}
-
-/**
- * Gère tous les évenements d'un produit du panier dans le tableau
- * @param {Element} tr_cart_product
- */
-function manageProductEvent(tr_cart_product)
-{
-manageInfluentPriceOnChangeEvents(tr_cart_product);
-manageRemoveProductEvent(tr_cart_product);
-}
-
-/**
- * Gère le changement de prix dû à des changements sur certaines colonnes.
- * @param {Element} tr_cart_product
- * */
-function manageInfluentPriceOnChangeEvents(tr_cart_product){
-    tr_cart_product.querySelectorAll('.influent-price-on-change').forEach( (element) => {
-        element.addEventListener('change', function(event) {
-            calculTotalProduct(tr_cart_product);
-            calculTotalCart();
+function openMenuHamburger(){
+    document.addEventListener("click", function(event) { // Le clic a été effectué en dehors de l'élément menu1
+        if (!menu1.contains(event.target)) { // Si le clic n'est pas dans le menu1
+            document.getElementById("pagehamburger").style.left = "-100%"; // Cacher le menu
+            }
         })
-    })
-}
+};
 
-/**
- * Gère la suppression d'une ligne via le bouton remove
- * @param {Element} tr_cart_product
- */
-function manageRemoveProductEvent(tr_cart_product) {
-    tr_cart_product.querySelector('.remove').addEventListener('click', function(e) {
-        tr_cart_product.remove();
-        calculTotalCart();
-    })
-}
-
-/**
- * Lance la logique de code pour les produits du panier
- */
-function initCartProducts()
-{
-    let tr_cart_products = document.querySelectorAll('.cart_product');
-    tr_cart_products.forEach(function(tr_cart_product) {
-        calculTotalProduct(tr_cart_product);
-        manageProductEvent(tr_cart_product);
-    })
-}
-
-
-/**
- * Recalcul le prix du panier si changement de choix de livraison
- */
-function manageDeliveryChange(){
-    document.querySelectorAll('.delivery-option').forEach((delivery_option) => {
-        delivery_option.addEventListener('change', function(e) {
-            calculTotalCart();
-        })
-    })
-}
 
 /**
 * Message d'erreur si case vide
@@ -134,53 +62,3 @@ function validateForm() {
         }
     });
 }
-
-
-
-/**
- * Récupère les data du fichier json et les affiche dans la console
- * @returns {Promise}
- */
-async function getProducts() {
-    const response = await fetch('../produits.json');
-    const products = await response.json();
-    return products;
-}
-
-/**
- * Création de la ligne du produit en html
- */
-async function fill_products () {
-    const cart_products = document.querySelector('#cart tbody');
-    await getProducts()
-        .then((products) => {
-            products.forEach((product) => {
-                const product_line = `
-                    <tr class="cart_product">
-                        <td>${product.nom} <br> <img src="${product.image}" class="cart_product__image"></td>
-                        <td class="unit_price" data-unit-price="${product.prix}">
-                            <span class="value">${formatPriceToEuro(product.prix)}</span>
-                        </td>
-                        <td class="quantity">
-                            <input type="number" class="influent-price-on-change" value="0" min="0">
-                        </td>
-                        <td class="total_price" data-total-price=""></td>
-                        <td>
-                            <ion-icon name="trash-outline" class="remove"></ion-icon>
-                        </td>
-                    </tr>`;
-                cart_products.innerHTML += product_line;
-            })
-    })  
-}
-
-/**
- * Formatage de prix en euro
- * @param {number}
- */
-
-function formatPriceToEuro (price) {
-    price = price / 100
-    return price.toLocaleString('fr-FR', { style: 'currency', currency: 'EUR' });
-}
-

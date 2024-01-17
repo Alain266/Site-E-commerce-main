@@ -216,7 +216,7 @@ form input {
   text-align: center; /* centre le texte */
 }
 
-.remove {
+.button-remove{
   margin: 25px auto 25px auto; /* centre le button */
   width: 25px; /* largeur */
   font-weight: bold; /* police de caractères */
@@ -227,7 +227,7 @@ form input {
   border: solid 1px rgba(255, 255, 255, 0.5); /* Bordure du menu */
 }
 
-.remove:hover {
+.button-remove:hover {
   width: 50%; /* largeur */
   background-color: rgba(255, 255, 255, 0.5); /* couleur de fond */
   color: rgba(0, 0, 0, 1); /* couleur du texte */
