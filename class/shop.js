@@ -12,11 +12,11 @@ class Shop {
         await this.#getDeliveries();
         new Lines(this.products);
         new Delivery(this.deliveries);
-        new Cart();
+        console.log("OK");
     }
 
     /**
-     * Récupère les data du fichier json et les affiche dans la console
+     * Récupère les data du fichier json 
      * @returns {Promise}
      */
     async #getProducts() {

@@ -63,7 +63,8 @@ class Cart {
 
     #onChangeDeletedProduct() {
         const observer = new MutationObserver((mutationList, observer) => {
-            for (mutation on mutationList) )
-        })
+            for (mutation on mutationList)
+            }
+        )
     }
 }

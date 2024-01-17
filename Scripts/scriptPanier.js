@@ -1,13 +1,13 @@
-
 /**
  * Initialise le code
  */
 function init()
 {
-    // overlay();
-    // openMenuHamburger();
-    // closeMenuHamburger();
+    overlay();
+    openMenuHamburger();
+    closeMenuHamburger();
     new Shop();
+    new Cart();
 }
 
 init();
