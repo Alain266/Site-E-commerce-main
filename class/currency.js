@@ -1,5 +1,11 @@
 class Currency {
-    constructor() {}
+    constructor() {
+        this.#onInit();
+    }
+
+    #onInit() {
+        formatPriceToEuro(price);
+    }
 
     /**
      * Formatage de prix en euro

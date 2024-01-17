@@ -1,8 +1,8 @@
+
 /**
  * Initialise le code
  */
-function init()
-{
+function init() {
     overlay();
     openMenuHamburger();
     closeMenuHamburger();

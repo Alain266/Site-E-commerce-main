@@ -5,8 +5,8 @@ class Cart {
     }
 
     #onInit() {
-        this.#manageDeliveryChange();
         this.#calculTotalCart();
+        this.#manageDeliveryChange();
         this.#onChangeTotalProduct();
     }
 
@@ -62,9 +62,17 @@ class Cart {
     }
 
     #onChangeDeletedProduct() {
+        console.log('TEST OK détecté');
+
+        const targetElement = document; // Remplacez 'example' par l'ID de l'élément que vous souhaitez observer
+    
         const observer = new MutationObserver((mutationList, observer) => {
-            for (mutation on mutationList)
+            for (let mutation of mutationList) {
+                // Traitement des changements
+                console.log('Changement détecté :', mutation);
             }
-        )
+        });
+    
+        observer.observe(targetElement, { attributes: true, childList: true, subtree: true });
     }
 }
