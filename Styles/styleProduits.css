@@ -249,6 +249,7 @@ header nav a{
 }
 
 .fiche-produit h1{
+    padding: 10px; /* marge intérieure */
     background-color: rgba(39, 105, 85, 0.5); /* couleur de fond */
     border-radius: 25px; /* angle de la bordure */
     font-size: 20px; /* taille de la police */

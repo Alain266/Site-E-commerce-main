@@ -8,7 +8,6 @@ async function init()
     closeMenuHamburger();
     getProducts();
     await fill_products();
-    new Shop();
     search();
 }
 
