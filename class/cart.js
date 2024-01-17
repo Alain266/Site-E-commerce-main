@@ -4,10 +4,10 @@ class Cart {
         this.#onInit();
     }
 
-    #onInit() {
-        this.#calculTotalCart();
+        #onInit() {
         this.#manageDeliveryChange();
         this.#onChangeTotalProduct();
+        this.#calculTotalCart();
     }
 
     /**
@@ -46,20 +46,11 @@ class Cart {
     }
 
     #onChangeTotalProduct() {
-        const elements = document.querySelectorAll('.total_price');
-
-        elements.forEach((element) => {
-            const observer = new MutationObserver((mutationList, observer) => {
-                console.log(mutationList)
-                for (let mutation of mutationList) {
-                    if(mutation.type === 'attributes' && mutation.attributeName === 'data-total-price') {
-                        this.#calculTotalCart();
-                    }
-                }
-            });
-            observer.observe(element, {attributes: true, attributeFilter: ['data-total-price']});
+        document.addEventListener('click', () => {
+            this.#calculTotalCart();
         })
     }
+
 
     #onChangeDeletedProduct() {
         console.log('TEST OK détecté');
