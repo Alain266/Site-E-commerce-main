@@ -207,6 +207,8 @@ header nav a {
 .quantity input {
   width: 35px; /* largeur */
   border-radius: 5px; /* angle de la bordure */
+  text-align: center; /* centre le texte */
+  color: black; /* couleur du texte */
 }
 
 form input {
@@ -258,7 +260,7 @@ form input {
 }
 
 #panier img{ 
-  width: 100px; /* largeur */
+  width: 100px; /* largeur */ 
   height: 100px; /* hauteur */
 }
 
