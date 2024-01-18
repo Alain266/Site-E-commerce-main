@@ -139,13 +139,13 @@ h2{
 
     10%,
     40% {
-        width: 12em;
+        width: 12.3em;
     }
 }
 
 @keyframes caret {
 
-    0%,
+    25%,
     100% {
         opacity: 0;
     }
