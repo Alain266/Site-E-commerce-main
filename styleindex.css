@@ -269,6 +269,11 @@ header nav a{
     border-radius: 150px; /* angle de la bordure */
 }
 
+.fiche-produit button{
+    position: relative;
+    bottom: max-content;
+}
+
 .p4{
     margin-bottom: 25px;
     height: max-content; /* hauteur */
