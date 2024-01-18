@@ -4,11 +4,17 @@ class Cart {
         this.#onInit();
     }
 
-        #onInit() {
+
+    /**
+     * Initialisation du code 
+     */
+    async #onInit() { 
         this.#manageDeliveryChange();
-        this.#onChangeTotalProduct();
-        this.#calculTotalCart();
+        await this.#onChangeTotalProduct();
+        await this.#calculTotalCart();
+        console.log('onInit - OK');
     }
+
 
     /**
      * Recalcul le prix du panier si changement de choix de livraison
@@ -19,6 +25,7 @@ class Cart {
                 this.#calculTotalCart();
             })
         })
+        console.log('manageDeliveryChange - OK');
     }
 
     /**
@@ -43,27 +50,30 @@ class Cart {
         document.querySelector('#cart .total_cart').textContent = Currency.formatPriceToEuro(total);
 
         return total;
+        console.log('calculTotalCart - OK');
     }
 
     #onChangeTotalProduct() {
+        document.addEventListener('DOMContentLoaded', () => {
+            this.#calculTotalCart();
+        });
+    
         document.addEventListener('click', () => {
             this.#calculTotalCart();
-        })
+        });
+        console.log('onChangeTotalProduct - OK');
     }
 
 
     #onChangeDeletedProduct() {
-        console.log('TEST OK détecté');
-
-        const targetElement = document; // Remplacez 'example' par l'ID de l'élément que vous souhaitez observer
+        const targetElement = document;
     
         const observer = new MutationObserver((mutationList, observer) => {
             for (let mutation of mutationList) {
-                // Traitement des changements
                 console.log('Changement détecté :', mutation);
             }
         });
-    
         observer.observe(targetElement, { attributes: true, childList: true, subtree: true });
+        console.log('onChangeDeletedProduct - OK');
     }
 }

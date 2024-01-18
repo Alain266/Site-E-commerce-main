@@ -321,7 +321,7 @@ color: #FFFFFF; /* couleur du texte */
   display: flex; /* Affiche les éléments en ligne */
   justify-content: center; /* Centre les éléments en ligne */
   flex-direction: column; /* disposition des éléments */
-  margin:0; /* marge intérieure */
+  margin:10px; /* marge intérieure */
   margin-bottom: 25px; /* marge intérieure */
   grid-area: p3; /* marge intérieure */
   background-color: rgba(39, 105, 85, 0.5); /* couleur de fond */
