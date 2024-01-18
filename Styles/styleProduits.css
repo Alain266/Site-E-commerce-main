@@ -182,9 +182,9 @@ header nav a{
 
 /* Disposition du contenu de la page par grille */
 .container{  display: grid;
-    grid-template-columns: 1fr 1fr; /* Nombre de colonnes */
-    grid-template-rows: max-content max-content 1fr max-content;
-    gap: 0px 0px;
+    grid-template-columns: 1fr 1fr; /* Nombre de colonnes */ 
+    grid-template-rows: max-content max-content 1fr max-content; /* Structure de la grille */
+    gap: 0px 0px; /* saut entre les éléments */
     grid-auto-flow: row; /* disposition dynamique des éléments en ligne*/
     grid-template-areas:
         "p1 p1"
@@ -236,7 +236,8 @@ header nav a{
 }
 
 .fiche-produit{
-    max-width: 300px;
+    list-style: none; /* retire les puces */
+    max-width: 300px; /* largeur maximale */
     font-weight: bold; /* Police de caractères */
     padding: 10px; /* marge intérieure */
     margin: 10px; /* marge intérieure */
