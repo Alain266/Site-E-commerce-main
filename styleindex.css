@@ -86,6 +86,75 @@ h2{
     text-align: center; /* Texte centré */
 }
 
+.text-1 {
+    animation: text1;
+}
+
+.text-2 {
+    animation: text2;
+}
+
+.text-1,
+.text-2 {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    animation-duration: 20s;
+    animation-timing-function: steps(25, end);
+    animation-iteration-count: infinite;
+}
+
+.text-1::after,
+.text-2::after {
+    content: "|";
+    position: absolute;
+    right: 0;
+    animation: caret infinite;
+    animation-duration: 1s;
+    animation-timing-function: steps(1, end);
+}
+
+@keyframes text2 {
+
+    0%,
+    50%,
+    100% {
+        width: 0;
+    }
+
+    60%,
+    90% {
+        width: 11.65em;
+    }
+}
+
+@keyframes text1 {
+
+    0%,
+    50%,
+    100% {
+        width: 0;
+    }
+
+    10%,
+    40% {
+        width: 12em;
+    }
+}
+
+@keyframes caret {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
 #slogan{
     position: absolute; /* position absolue */
     margin-left: 50%; /* marge intérieure */
@@ -307,6 +376,26 @@ header nav a{
     border-radius: 150px; /* angle de la bordure */
     font-size: 20px; /* taille de la police */
     backdrop-filter: blur(5px); /* Effet de flou */
+}
+
+.avis:hover{
+    transform: scale(1.05); /* Zoom au survol */
+    animation: swing 1s ease-in-out infinite; /* Animation de fondu */
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(0deg);
+    }
+    33% {
+        transform: rotate(2deg);
+    }
+    66% {
+        transform: rotate(-2deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 .p5{
