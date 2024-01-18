@@ -7,8 +7,8 @@ async function init()
     openMenuHamburger();
     closeMenuHamburger();
     getProducts();
-    // formatPriceToEuro(price);
     await fill_products();
+    new Currency();
 }
 
 init();
@@ -21,14 +21,6 @@ async function getProducts() {
     const response = await fetch('../produits.json');
     const products = await response.json();
     return products;
-}
-
-/**
- * Formatage de prix en euro
- * @param {number}
- */
-function formatPriceToEuro (price) {
-    return price.toLocaleString('fr-FR', { style: 'currency', currency: 'EUR' });
 }
 
 /**
@@ -62,11 +54,11 @@ function openMenuHamburger(){
 };
 
 /**
- * Récupère les data du fichier json et les affiche dans la page
+ * Récupère les data du fichier json et les inscrit dans la page
  */
 async function fill_products () {
 
-    const cat1 = document.querySelector('#cat1');
+    const cat1 = document.querySelector('#cat1'); 
     const cat2 = document.querySelector('#cat2');
     const cat3 = document.querySelector('#cat3');
     const products = await getProducts();
@@ -79,7 +71,7 @@ async function fill_products () {
         <p>${product.description}</p>
         <p>Prix : ${formatPriceToEuro(product.prix)}</p> 
         <br>
-        <button>Acheter</button>
+        <button id="${product.id}">Acheter</button>
         </div>`;
         if (products[i].categorie == "VETEMENTS ECO-RESPONSABLES"){
             cat1.innerHTML += product_line;

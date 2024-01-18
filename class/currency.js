@@ -4,7 +4,8 @@ class Currency {
     }
 
     #onInit() {
-        formatPriceToEuro(price);
+        formatPriceToEuro();
+        console.log('onInit - OK');
     }
 
     /**
@@ -14,5 +15,6 @@ class Currency {
     static formatPriceToEuro(price) {
         price = price / 100
         return price.toLocaleString('fr-FR', { style: 'currency', currency: 'EUR' });
+        console.log('formatPriceToEuro - OK');
     }
 }

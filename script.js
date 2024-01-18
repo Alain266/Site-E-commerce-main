@@ -77,7 +77,7 @@ async function fill_products () {
                 <h1>${product.nom}</h1>
                 <p>${product.description}</p>
                 <p>Prix : ${formatPriceToEuro(product.prix)}</p>
-                <button>Acheter</button>
+                <button id="${product.id}">Acheter</button>
             </div>
         </div>`;
         

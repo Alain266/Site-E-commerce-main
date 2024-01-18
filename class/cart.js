@@ -53,6 +53,9 @@ class Cart {
         console.log('calculTotalCart - OK');
     }
 
+    /**
+     * Changement du total du produit
+     */
     #onChangeTotalProduct() {
         document.addEventListener('DOMContentLoaded', () => {
             this.#calculTotalCart();
@@ -62,18 +65,5 @@ class Cart {
             this.#calculTotalCart();
         });
         console.log('onChangeTotalProduct - OK');
-    }
-
-
-    #onChangeDeletedProduct() {
-        const targetElement = document;
-    
-        const observer = new MutationObserver((mutationList, observer) => {
-            for (let mutation of mutationList) {
-                console.log('Changement détecté :', mutation);
-            }
-        });
-        observer.observe(targetElement, { attributes: true, childList: true, subtree: true });
-        console.log('onChangeDeletedProduct - OK');
     }
 }
