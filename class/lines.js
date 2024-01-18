@@ -8,6 +8,7 @@ class Lines {
 
     #onInit() {
         this.#fill_products();
+        console.log('onInit - lines- OK');
     }
 
     /**

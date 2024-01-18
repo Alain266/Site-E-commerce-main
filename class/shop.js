@@ -15,7 +15,7 @@ class Shop {
         await this.#getDeliveries();
         new Lines(this.products);
         new Delivery(this.deliveries);
-        console.log("OK");
+        console.log('onInit - shop - OK');
     }
 
     /**

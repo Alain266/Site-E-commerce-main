@@ -9,6 +9,7 @@ async function init()
     getProducts();
     await fill_products();
     search();
+    console.log('onInit - OK');
 }
 
 init();

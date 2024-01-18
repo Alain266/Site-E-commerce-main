@@ -10,7 +10,7 @@ async function init()
     getProducts();
     // formatPriceToEuro (price);
     await fill_products();
-    search()
+    search();
 }
 
 init();

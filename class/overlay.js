@@ -6,6 +6,7 @@ class Overlay {
 
     #onInit () {
         this.#overlay();
+        console.log('onInit - overlay - OK');
     }
 
     /**

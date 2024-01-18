@@ -12,7 +12,7 @@ class Cart {
         this.#manageDeliveryChange();
         await this.#onChangeTotalProduct();
         await this.#calculTotalCart();
-        console.log('onInit - OK');
+        console.log('onInit - cart - OK');
     }
 
 

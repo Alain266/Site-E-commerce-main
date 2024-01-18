@@ -8,6 +8,7 @@ function init() {
     closeMenuHamburger();
     new Shop();
     new Cart();
+    console.log('onInit - scriptPanier - OK');
 }
 
 init();

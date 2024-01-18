@@ -15,6 +15,7 @@ class Line {
         this.#calculTotalProduct();
         this.#manageRemoveProductEvent();
         this.#onChangeQuantity();
+        console.log('onInit - line - OK');
     }
 
     /**

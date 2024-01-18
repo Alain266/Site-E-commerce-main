@@ -9,6 +9,7 @@ async function init()
     getProducts();
     await fill_products();
     new Currency();
+    console.log('onInit - scriptCategorie - OK');
 }
 
 init();
