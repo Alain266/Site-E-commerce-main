@@ -6,7 +6,7 @@ class Cart {
 
 
     /**
-     * Initialisation du code 
+     * Initialisation de la classe 
      */
     async #onInit() { 
         this.#manageDeliveryChange();
@@ -23,9 +23,9 @@ class Cart {
         document.querySelectorAll('.delivery-option').forEach((delivery_option) => {
             delivery_option.addEventListener('change', () => {
                 this.#calculTotalCart();
+                console.log('manageDeliveryChange - OK');
             })
         })
-        console.log('manageDeliveryChange - OK');
     }
 
     /**
@@ -56,8 +56,8 @@ class Cart {
     /**
      * Changement du total du produit
      */
-    #onChangeTotalProduct() {
-        document.addEventListener('DOMContentLoaded', () => {
+    async #onChangeTotalProduct() {
+        await document.addEventListener('DOMContentLoaded', () => {
             this.#calculTotalCart();
         });
     

@@ -6,6 +6,9 @@ class Lines {
         this.#onInit();
     }
 
+    /**
+     * Initialisation de la classe
+     */
     #onInit() {
         this.#fill_products();
         console.log('onInit - lines- OK');

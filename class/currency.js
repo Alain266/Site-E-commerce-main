@@ -3,6 +3,9 @@ class Currency {
         this.#onInit();
     }
 
+    /**
+     * Initialisation de la classe
+    */
     #onInit() {
         formatPriceToEuro();
         console.log('onInit - OK');

@@ -10,6 +10,10 @@ class Line {
         this.#onInit();
     };
 
+
+    /**
+     * Initialisation de la classe 
+     */
     #onInit() {
         this.#createLineHTML();
         this.#calculTotalProduct();
@@ -53,6 +57,10 @@ class Line {
         this.productElement.querySelector('.total_price').dataset.totalPrice = this.total; // Stocke le total
     }
 
+
+    /**
+     * Création de la ligne
+     */
     #createLineHTML() {
         const cart_products = document.querySelector('#cart tbody');
         const product_line = `
@@ -70,6 +78,6 @@ class Line {
                 </td>
             </tr>`;
         cart_products.insertAdjacentHTML('beforeend', product_line); // Insertion += product_line;
-        this.productElement = document.querySelector('.cart_product:last-child');
+        this.productElement = document.querySelector('.cart_product:last-child'); // Recherche de la derniere ligne
     }
 }

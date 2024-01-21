@@ -4,6 +4,10 @@ class Overlay {
         this.#onInit();
     }
 
+
+    /**
+     * Initialisation de la classe
+     */
     #onInit () {
         this.#overlay();
         console.log('onInit - overlay - OK');
