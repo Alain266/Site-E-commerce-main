@@ -9,7 +9,6 @@ Bienvenue dans l'éco-boutique Eco-commerce, un site d'achat en ligne dédié au
 - [Structure du Projet](#structure-du-projet)
 - [Technologies Utilisées](#technologies-utilisées)
 - [Auteur](#auteur)
-- [Licence](#licence)
 
 ## Prérequis
 - Navigateur web moderne
