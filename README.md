@@ -16,7 +16,7 @@ Bienvenue dans l'éco-boutique Eco-commerce, un site d'achat en ligne dédié au
 - Connexion Internet
 
 ## Installation
-1. Clonez ce dépôt : `git clone https://github.com/votre-utilisateur/nom-du-projet.git`
+1. Clonez ce dépôt : `git clone https://github.com/Alain266/Site-E-commerce-main`
 2. Ouvrez le fichier `index.html` dans votre navigateur.
 
 ## Structure du Projet
