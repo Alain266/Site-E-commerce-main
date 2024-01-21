@@ -3,14 +3,13 @@
  */
 async function init()
 {   
-    
     overlay();
     openMenuHamburger();
     closeMenuHamburger();
     getProducts();
-    // formatPriceToEuro (price);
     await fill_products();
-    search();
+    new Currency();
+    console.log('onInit - scriptCategorie - OK');
 }
 
 init();
@@ -23,15 +22,6 @@ async function getProducts() {
     const response = await fetch('../produits.json');
     const products = await response.json();
     return products;
-}
-
-/**
- * Formatage de prix en euro
- * @param {number}
- */
-function formatPriceToEuro (price) {
-    price = price / 100
-    return price.toLocaleString('fr-FR', { style: 'currency', currency: 'EUR' });
 }
 
 /**
@@ -65,42 +55,31 @@ function openMenuHamburger(){
 };
 
 /**
- * Création des meilleures ventes du moment
+ * Récupère les data du fichier json et les inscrit dans la page
  */
 async function fill_products () {
 
-    const cart_products = document.querySelector('#produits');
-    const products =await getProducts();
+    const cat1 = document.querySelector('#cat1'); 
+    const cat2 = document.querySelector('#cat2');
+    const cat3 = document.querySelector('#cat3');
+    const products = await getProducts();
 
     for (let i=0; i<products.length; i++) {
         const product = products[i];
-        const product_line = `<div class="fiche-produit">
-                <img src="${product.image}">
-                <h1>${product.nom}</h1>
-                <p>${product.description}</p>
-                <p>Prix : ${formatPriceToEuro(product.prix)}</p>
-                <button id="${product.description}">Acheter</button>
-            </div>
-        </div>`
-        
-        cart_products.innerHTML += product_line;
-    }
-}
-
-/**
- * Barre de recherche 
- */
-function search() { //fonction de recherche
-    let input = document.getElementById('searchbar').value // recupère la valeur de l'input
-    input=input.toLowerCase(); // met la valeur en minuscule
-    let produit = document.getElementsByClassName('fiche-produit'); // recupère la classe
-
-    for (i = 0; i < produit.length; i++) { // pour chaque élément dans la classe fiche-produit
-        if (!produit[i].innerHTML.toLowerCase().includes(input)) { // si l'élément ne contient pas la valeur de l'input
-            produit[i].style.display="none"; // cache l'élément
-        }
-        else {
-            produit[i].style.display="list-item"; // sinon affiche l'élément  
+        const product_line = `<div class="produits_cart">
+        <img src="${product.image}">
+        <h1>${product.nom}</h1>
+        <p>${product.description}</p>
+        <p>Prix : ${formatPriceToEuro(product.prix)}</p> 
+        <br>
+        <button id="${product.id}">Acheter</button>
+        </div>`;
+        if (products[i].categorie == "VETEMENTS ECO-RESPONSABLES"){
+            cat1.innerHTML += product_line;
+        } else if(products[i].categorie == "PRODUITS DE SOIN NATURELS"){
+            cat2.innerHTML += product_line;
+        } else if(products[i].categorie == "ARTICLES POUR VOTRE ECO-MAISON"){
+            cat3.innerHTML += product_line;
         }
     }
 }

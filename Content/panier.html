@@ -11,7 +11,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Preconnect google api pour les polices -->
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet"> <!-- Police de caractères google -->
     <link rel="stylesheet" href="../Styles/stylePanier.css"> <!-- Lien vers le fichier style -->
-    <script src="../script.js" defer></script> <!-- Lien vers le fichier script -->
+    <script src="../class/shop.js" defer></script>
+    <script src="../class/line.js" defer></script>
+    <script src="../class/delivery.js" defer></script> 
+    <script src="../class/lines.js" defer></script> 
+    <script src="../class/currency.js" defer></script> 
+    <script src="../class/cart.js" defer></script> 
+    <script src="../class/overlay.js" defer></script> 
     <script src="../Scripts/scriptPanier.js" defer></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -31,7 +37,7 @@
         </ul>
     </div>
     <header> <!-- Haut de page du site -->
-        <h1>Eco-commerce <br> <span id="slogan">Site d'achat en ligne éco-friendly</span></h1> <!-- Titre du site -->
+        <h1>Eco-commerce <br> <span id="slogan" class="text-1">Site d'achat en ligne éco-friendly</span><span id="slogan" class="text-2">Contribuez à un avenir durable !</span></h1> <!-- Titre du site -->
         <nav> <!-- Navigation du site -->
             <a href="../index.html">Accueil</a> 
             <a href="produits.html">Produits</a>
@@ -42,9 +48,6 @@
         <img id="menu1" class="menu" src="../Images/Logo/icons8-menu-64(1).png" alt="Menu"/> <!-- Navigation du site version mobile -->
     </header>
     <main class="container"> <!-- Main contenu -->
-        <div class="p1">
-            <input type="text" placeholder="Rechercher..." class="search"/>
-        </div>
         <article class="p3"> <!-- Panier -->
             <h2 id="titre1">PANIER</h2> <!-- Titre du panier -->
             <div id="panier"> <!-- Panier -->
@@ -67,7 +70,7 @@
                     </tfoot>
                 </table>
                 <fieldset> <!-- Formulaire du panier -->
-                    <legend style="margin: auto;";">Selectionnnez un mode de livraison :</legend> <!-- Titre du fieldset -->
+                    <legend style="margin: auto;">Selectionnnez un mode de livraison :</legend> <!-- Titre du fieldset -->
                     <div>
                         <label for="delivery-2">Domicile (12 €) <ion-icon name="storefront-outline"></ion-icon></label>
                         <input class="delivery-option" name="delivery" id="delivery-2" value="1200" type="radio"></label>

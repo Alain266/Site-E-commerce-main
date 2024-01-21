@@ -3,12 +3,13 @@
  */
 async function init()
 {   
-    
     overlay();
     openMenuHamburger();
     closeMenuHamburger();
     getProducts();
     await fill_products();
+    search();
+    console.log('onInit - OK');
 }
 
 init();
@@ -68,7 +69,7 @@ function openMenuHamburger(){
 async function fill_products () {
 
     const cart_products = document.querySelector('#produits');
-    const products =await getProducts();
+    const products = await getProducts();
 
     for (let i=0; i< 4 && i <products.length; i++) {
         const product = products[i];
@@ -77,10 +78,29 @@ async function fill_products () {
                 <h1>${product.nom}</h1>
                 <p>${product.description}</p>
                 <p>Prix : ${formatPriceToEuro(product.prix)}</p>
-                <button>Acheter</button>
+                <button id="${product.id}">Acheter</button>
             </div>
-        </div>`
+        </div>`;
         
         cart_products.innerHTML += product_line;
     }
 }
+
+/**
+ * Barre de recherche 
+ */
+function search() { //fonction de recherche
+    let input = document.getElementById('searchbar').value // recupère la valeur de l'input
+    input=input.toLowerCase(); // met la valeur en minuscule
+    let produit = document.getElementsByClassName('produits_cart'); // recupère la classe
+
+    for (i = 0; i < produit.length; i++) { // pour chaque élément dans la classe produits_cart  
+        if (!produit[i].innerHTML.toLowerCase().includes(input)) { // si l'élément ne contient pas la valeur de l'input
+            produit[i].style.display="none"; // cache l'élément
+        }
+        else {
+            produit[i].style.display="list-item"; // sinon affiche l'élément  
+        }
+    }
+}
+
