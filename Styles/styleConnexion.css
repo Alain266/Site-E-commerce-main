@@ -256,8 +256,8 @@ header nav a{
     gap: 0px 0px;
     grid-auto-flow: row; /* disposition dynamique des éléments en ligne*/
     grid-template-areas:
-      "p3 p3"
-      "p5 p5";
+        "p3 p3"
+        "p5 p5";
 }
 
 .p3{

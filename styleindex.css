@@ -58,7 +58,6 @@ body{
 
 
 main{
-    
     display: flex; /* Affiche les éléments en ligne */
     justify-content: center; /* Centre les éléments en ligne */
     margin: 0 0 0 0; /* marge intérieure */
@@ -187,20 +186,6 @@ header nav a{
     nav a{
         display: none /* N'affiche rien */
     }  
-}
-
-.menu{
-    position: absolute; /* position absolue */
-    top: 99px; /* tire vers le haut */
-    right: 45%; /* tire vers la droite */
-    width: 50px; /* largeur */
-}
-
-/* style si l'écran est plus grand que 1080px */
-@media screen and (min-width: 1080px) { 
-    .menu{
-        display: none /* N'affiche rien */
-    }    
 }
 
 /* Disposition du menu hamburger */

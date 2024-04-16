@@ -37,7 +37,7 @@ function formatPriceToEuro (price) {
  * Overlay de chargement
  */
 function overlay() {
-    window.addEventListener("load", function() { // Lorsque la page et les ressources sont totalement chargées
+    // window.addEventListener("load", function() { // Lorsque la page et les ressources sont totalement chargées
         var loadingOverlay = document.querySelector(".loading-overlay"); // Récupérer l'overlay de chargement
         loadingOverlay.style.display = "none"; // Cacher l'overlay de chargement
     })
