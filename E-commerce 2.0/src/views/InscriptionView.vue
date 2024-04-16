@@ -1,7 +1,7 @@
 <script>
 import { RouterLink } from 'vue-router'
 export default {
-    name: 'ConnexionView',
+    name: 'InscriptionView',
     data() {
         return {
             username: '',
@@ -23,7 +23,7 @@ export default {
 
 <template>
     <article class="p3"> <!-- Article produits -->
-        <h2 id="titre1">CONNEXION</h2>
+        <h2 id="titre1">INSCRIPTION</h2>
         <form @submit.prevent="submitForm"> <!-- Formulaire du site -->
             <fieldset>
                 <label for="nom">Nom d'utilisateur :</label> <!-- Label du champ --> <br>
@@ -33,10 +33,9 @@ export default {
                 <label for="password">Mot de passe :</label> <!-- Label du champ --> <br>
                 <input type="password" v-model="password" id="password" required> <!-- Champ du formulaire -->
             </fieldset>
-            <button type="submit">Se connecter</button> <!-- Bouton du formulaire -->
+            <button type="submit">Enregistrer</button> <!-- Bouton du formulaire -->
         </form>
-        <RouterLink to="/inscription">Je n'ai pas de compte</RouterLink>
-        <RouterLink to="/pass-recover">Mot de passe oublié ?</RouterLink>
+        <RouterLink to="/connexion">J'ai déjà un compte</RouterLink>
     </article>
 </template>
 
@@ -54,26 +53,6 @@ export default {
     /* largeur */
     font-size: 20px;
     /* taille de la police */
-}
-
-form {
-    display: flex;
-    /* Affiche les éléments en ligne */
-    flex-direction: column;
-    /* disposition des éléments */
-    align-items: center;
-    /* Centre les éléments en colonne */
-}
-
-fieldset {
-    width: 20em;
-    /* largeur */
-    display: flex;
-    /* Affiche les éléments en ligne */
-    justify-content: center;
-    /* Centre les éléments en ligne */
-    border-radius: 25px;
-    /* angle de la bordure */
 }
 
 .p3 {
@@ -130,7 +109,19 @@ fieldset {
         "p5 p5";
 }
 
+
+form {
+    display: flex;
+    /* Affiche les éléments en ligne */
+    flex-direction: column;
+    /* disposition des éléments */
+    align-items: center;
+    /* Centre les éléments en colonne */
+}
+
 fieldset {
+    width: 20em;
+    /* largeur */
     display: flex;
     /* Affiche les éléments en ligne */
     justify-content: center;
@@ -142,6 +133,8 @@ fieldset {
     /* marge intérieure */
     color: #FFFFFF;
     /* couleur du texte */
+    border-radius: 25px;
+    /* angle de la bordure */
 }
 
 input {
@@ -167,6 +160,7 @@ button {
     background-color: #000000;
     /* couleur de fond */
     transition: transform 1.5s, border-radius 3s;
+    /* Transition avec effet smooth */
 }
 
 button:hover {

@@ -1,16 +1,30 @@
 <!-- Script -->
 <script lang="ts">
+import ContactsCustom from '../components/ContactsCustom.vue'
+import PartnerCustom from '../components/PartnerCustom.vue'
 export default {
     name: 'ContactsView',
+    components: {
+        ContactsCustom,
+        PartnerCustom,
+    },
+    emits: ['loading'],
+    methods: {
+        onload (event) {
+            this.$emit('loading', event)
+        }
+    }
 }
 </script>
 
 <!-- Template -->
 <template>
-    <div class="contacts">
-        <h1>This is an contacts page</h1>
-    </div>
+    <main class="container">
+        <ContactsCustom />
+        <PartnerCustom />
+    </main>
 </template>
 
 <!-- Style -->
-<style></style>
+<style>
+</style>

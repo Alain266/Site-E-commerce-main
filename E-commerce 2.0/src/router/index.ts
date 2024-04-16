@@ -33,6 +33,16 @@ const router = createRouter({
             name: 'Connexion',
             component: () => import('../views/ConnexionView.vue')
         },
+        {
+            path: '/inscription',
+            name: 'Inscription',
+            component: () => import('../views/InscriptionView.vue')
+        },
+        {
+            path: '/pass-recover',
+            name: 'PassRecover',
+            component: () => import('../views/PassRecoverView.vue')
+        },
     ]
 })
 

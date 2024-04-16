@@ -1,7 +1,7 @@
 <!-- Script -->
 <script lang="ts">
 export default {
-    name: 'Footer-custom',
+    name: 'FooterCustom',
 }
 </script>
 

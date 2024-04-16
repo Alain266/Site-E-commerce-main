@@ -1,7 +1,7 @@
 <script>
 import { RouterLink } from 'vue-router'
 export default {
-    name: 'ConnexionView',
+    name: 'PassRecoverView',
     data() {
         return {
             username: '',
@@ -23,20 +23,21 @@ export default {
 
 <template>
     <article class="p3"> <!-- Article produits -->
-        <h2 id="titre1">CONNEXION</h2>
+        <h2 id="titre1">MOT DE PASSE OUBLIE</h2>
+        <p> Veuillez entrer votre nom d'utilisateur et l'adresse e-mail associée a votre compte. <br> Nous allons vous communiquer votre nouveau mot de passe. <br> Veuillez penser a bien vérifier dans vos spams.</p>
         <form @submit.prevent="submitForm"> <!-- Formulaire du site -->
             <fieldset>
                 <label for="nom">Nom d'utilisateur :</label> <!-- Label du champ --> <br>
                 <input type="text" v-model="username" id="nom" required> <!-- Champ du formulaire -->
             </fieldset>
             <fieldset>
-                <label for="password">Mot de passe :</label> <!-- Label du champ --> <br>
-                <input type="password" v-model="password" id="password" required> <!-- Champ du formulaire -->
+                <label for="email">Adresse e-mail :</label> <!-- Label du champ --> <br>
+                <input type="email" v-model="email" id="email" required> <!-- Champ du formulaire -->
             </fieldset>
-            <button type="submit">Se connecter</button> <!-- Bouton du formulaire -->
+            <button type="submit">Recevoir</button> <!-- Bouton du formulaire -->
         </form>
         <RouterLink to="/inscription">Je n'ai pas de compte</RouterLink>
-        <RouterLink to="/pass-recover">Mot de passe oublié ?</RouterLink>
+        <RouterLink to="/connexion">Revenir en arrière</RouterLink>
     </article>
 </template>
 
@@ -54,26 +55,6 @@ export default {
     /* largeur */
     font-size: 20px;
     /* taille de la police */
-}
-
-form {
-    display: flex;
-    /* Affiche les éléments en ligne */
-    flex-direction: column;
-    /* disposition des éléments */
-    align-items: center;
-    /* Centre les éléments en colonne */
-}
-
-fieldset {
-    width: 20em;
-    /* largeur */
-    display: flex;
-    /* Affiche les éléments en ligne */
-    justify-content: center;
-    /* Centre les éléments en ligne */
-    border-radius: 25px;
-    /* angle de la bordure */
 }
 
 .p3 {
@@ -130,7 +111,23 @@ fieldset {
         "p5 p5";
 }
 
+p {
+    text-align: center;
+    /* centre le texte */
+}
+
+form {
+    display: flex;
+    /* Affiche les éléments en ligne */
+    flex-direction: column;
+    /* disposition des éléments */
+    align-items: center;
+    /* Centre les éléments en colonne */
+}
+
 fieldset {
+    width: 20em;
+    /* largeur */
     display: flex;
     /* Affiche les éléments en ligne */
     justify-content: center;
@@ -142,6 +139,8 @@ fieldset {
     /* marge intérieure */
     color: #FFFFFF;
     /* couleur du texte */
+    border-radius: 25px;
+    /* angle de la bordure */
 }
 
 input {
@@ -167,6 +166,7 @@ button {
     background-color: #000000;
     /* couleur de fond */
     transition: transform 1.5s, border-radius 3s;
+    /* Transition avec effet smooth */
 }
 
 button:hover {
