@@ -1,0 +1,30 @@
+*{
+    font-family: 'Montserrat', sans-serif; /* Police de caractères */
+}
+
+body{
+    margin: 0 0 0 0; /* marge intérieure */
+    background-image: url("../assets/pexels-tomas-anunziata-3876407.jpg"); /* Chemin vers votre image de fond */
+    background-size:cover; /* Taille de l'image */
+    height: max-content; /* Hauteur de l'image */
+}
+
+#app {
+    margin: 0;
+    font-weight: normal;
+}
+
+a,
+.green {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: 0.4s;
+    padding: 3px;
+    font-size: 20px;
+}
+
+@media (hover: hover) {
+    a:hover {
+        background-color: hsla(160, 100%, 37%, 0.2);
+    }
+}
