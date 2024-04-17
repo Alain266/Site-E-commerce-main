@@ -22,7 +22,7 @@ export default {
         <p>{{product.description}}</p>
         <div>
             <p>Prix : {{this.formatPriceToEuro(product.prix)}}</p>
-            <button id="btnBuy">Acheter</button>
+            <button id="btnBuy" @click="$emit('add-product', product)">Acheter</button>
         </div>
     </div>
 </template>
