@@ -30,6 +30,10 @@ export default {
                 <input type="text" v-model="username" id="nom" required> <!-- Champ du formulaire -->
             </fieldset>
             <fieldset>
+                <label for="email">Adresse e-mail :</label> <!-- Label du champ --> <br>
+                <input type="email" v-model="email" id="email" required> <!-- Champ du formulaire -->
+            </fieldset>
+            <fieldset>
                 <label for="password">Mot de passe :</label> <!-- Label du champ --> <br>
                 <input type="password" v-model="password" id="password" required> <!-- Champ du formulaire -->
             </fieldset>
