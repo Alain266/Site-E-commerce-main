@@ -13,11 +13,11 @@ Pour commencer à utiliser ce projet, suivez ces étapes :
 
 1. Clonez le dépôt :
     ```bash
-    git clone https://github.com/votre-utilisateur/MonSite.git
+    git clone https://github.com/Alain266/Site-E-commerce-main/E-commerce 2.0.git
     ```
 2. Accédez au dossier du projet :
     ```bash
-    cd MonSite
+    cd Site-E-commerce-main/E-commerce 2.0
     ```
 3. Installez les dépendances :
     ```bash
