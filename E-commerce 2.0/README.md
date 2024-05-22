@@ -1,6 +1,6 @@
-# 🌿 MonSite Éco-responsable
+# 🌿 E-commerce Éco-responsable
 
-Bienvenue sur **MonSite**, une application e-commerce écoresponsable développée avec Vue.js et TypeScript. Ce projet utilise une structure de composants pour organiser le contenu, avec des composants personnalisés pour l'en-tête, le pied de page, et une superposition de chargement.
+Bienvenue sur **E-commerce Éco-responsable**, une application e-commerce écoresponsable développée avec Vue.js et TypeScript. Ce projet utilise une structure de composants pour organiser le contenu, avec des composants personnalisés pour l'en-tête, le pied de page, et une superposition de chargement.
 
 ## Table des matières
 - [🚀 Installation](#-installation)
