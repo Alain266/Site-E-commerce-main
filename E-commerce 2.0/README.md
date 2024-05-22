@@ -5,9 +5,6 @@ Bienvenue sur **Eco-commerce**, une application e-commerce écoresponsable déve
 ## Table des matières
 - [🚀 Installation](#-installation)
 - [📚 Utilisation](#-utilisation)
-- [📁 Structure du projet](#-structure-du-projet)
-- [🧩 Composants](#-composants)
-- [🤝 Contribuer](#-contribuer)
 - [📄 Licence](#-licence)
 
 ## 🚀 Installation
@@ -34,28 +31,6 @@ Pour commencer à utiliser ce projet, suivez ces étapes :
 ## 📚 Utilisation
 
 Une fois le serveur de développement lancé, ouvrez votre navigateur et accédez à `http://localhost:5173` pour voir le site en action.
-
-## 📁 Structure du projet
-
-Voici un aperçu de la structure des fichiers du projet :
-
-`MonSite/
-├── public/
-├── src/
-│ ├── assets/
-│ ├── components/
-│ │ ├── FooterCustom.vue
-│ │ ├── HeaderCustom.vue
-│ │ └── OverlayCustom.vue
-│ ├── router/
-│ ├── views/
-│ ├── App.vue
-│ └── main.ts
-├── .gitignore
-├── index.html
-├── package.json
-├── README.md
-└── vite.config.js`
 
 📄 Licence
 
