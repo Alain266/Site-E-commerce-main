@@ -39,7 +39,7 @@ Une fois le serveur de développement lancé, ouvrez votre navigateur et accéde
 
 Voici un aperçu de la structure des fichiers du projet :
 
-MonSite/
+`MonSite/
 ├── public/
 ├── src/
 │ ├── assets/
@@ -55,7 +55,7 @@ MonSite/
 ├── index.html
 ├── package.json
 ├── README.md
-└── vite.config.js
+└── vite.config.js`
 
 📄 Licence
 
