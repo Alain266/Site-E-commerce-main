@@ -21,7 +21,7 @@ export default {
         <h1>{{product.nom}}</h1>
         <p>{{product.description}}</p>
         <div>
-            <p>Prix : {{this.formatPriceToEuro(product.prix)}}</p>
+            <p>Prix : {{formatPriceToEuro(product.prix)}}</p>
             <button id="btnBuy" @click="$emit('add-product', product)">Acheter</button>
         </div>
     </div>
