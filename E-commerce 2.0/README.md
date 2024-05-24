@@ -1,39 +1,37 @@
-# E-commerce 2.0
+# 🌿 Eco-commerce
 
-This template should help get you started developing with Vue 3 in Vite.
+Bienvenue sur **Eco-commerce**, une application e-commerce écoresponsable développée avec Vue.js et TypeScript. Ce projet utilise une structure de composants pour organiser le contenu, avec des composants personnalisés pour l'en-tête, le pied de page, et une superposition de chargement.
 
-## Recommended IDE Setup
+## Table des matières
+- [🚀 Installation](#-installation)
+- [📚 Utilisation](#-utilisation)
+- [📄 Licence](#-licence)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 🚀 Installation
 
-## Type Support for `.vue` Imports in TS
+Pour commencer à utiliser ce projet, suivez ces étapes :
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+1. Clonez le dépôt :
+    ```bash
+    git clone https://github.com/Alain266/Site-E-commerce-main/E-commerce 2.0.git
+    ```
+2. Accédez au dossier du projet :
+    ```bash
+    cd Site-E-commerce-main/E-commerce 2.0
+    ```
+3. Installez les dépendances :
+    ```bash
+    npm install
+    ```
+4. Lancez le serveur de développement :
+    ```bash
+    npm run dev
+    ```
 
-## Customize configuration
+## 📚 Utilisation
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+Une fois le serveur de développement lancé, ouvrez votre navigateur et accédez à `http://localhost:5173` pour voir le site en action.
 
-## Project Setup
+📄 Licence
 
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+Ce projet est sous licence MIT. Voir le fichier LICENSE pour plus de détails.
