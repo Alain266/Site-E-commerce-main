@@ -29,7 +29,7 @@ export default defineComponent({
         <article> <!-- Article produits -->
             <h2 id="titre1">TOUS NOS PRODUITS</h2>
             <div id="produits">
-                <ProductCardCustom v-for="product in this.productsStore.products" :key="product.id" :product="product"/>
+                <ProductCardCustom v-for="product in productsStore.products" :key="product.id" :product="product"/>
             </div>
         </article>
     </div>
