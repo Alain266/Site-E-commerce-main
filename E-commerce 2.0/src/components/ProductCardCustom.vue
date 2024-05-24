@@ -6,7 +6,7 @@ export default {
     props: ['product'],
 
     methods: {
-        formatPriceToEuro(price) {
+        formatPriceToEuro(price: number) {
             console.log('formatPriceToEuro - OK')
             return price/100 + '€';
         }
