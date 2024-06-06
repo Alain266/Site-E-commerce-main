@@ -41,7 +41,7 @@ export default {
             }
         }
     },
-    onload(event) {
+    onload(event : Event) {
         this.$emit('loading', event)
     }
 }
@@ -81,7 +81,7 @@ export default {
                     <div>
                         <label for="delivery-1">Relais colis (5 €) <ion-icon name="home-outline"></ion-icon></label>
                         <input class="delivery-option" name="delivery" id="delivery-1" value="500" type="radio"
-                            checked="">
+                            checked="false">
                     </div>
                 </fieldset>
                 <form class="center" style="margin: 25px">
