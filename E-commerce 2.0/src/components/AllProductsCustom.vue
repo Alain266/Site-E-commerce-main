@@ -2,7 +2,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import ProductCardCustom from './ProductCardCustom.vue';
-import {useProductsStore} from '../stores/products.ts';
+import {useProductsStore} from '../stores/products';
 import {mapStores} from 'pinia';
 
 export default defineComponent({

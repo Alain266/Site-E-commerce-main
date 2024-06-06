@@ -2,7 +2,7 @@ import { defineStore } from "pinia";
 
 export const useProductsStore = defineStore('products', {
     state: () => ({
-        products: []
+        products: [],
     }),
     getters: {
         
@@ -19,6 +19,6 @@ export const useProductsStore = defineStore('products', {
                 console.error('Error fetching products:', error);
             }
             console.log('getProducts - OK')
-        }
+        },
     }
 })
